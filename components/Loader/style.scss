@@ -1,0 +1,18 @@
+.Loader {
+  @apply text-center;
+
+  &__spinner {
+    @apply border-2;
+    @apply border-current;
+    @apply rounded-full;
+    @apply border-l-transparent;
+    @apply w-10 h-10;
+    @apply animate-spin;
+    @apply mx-auto;
+  }
+
+  &__text {
+    @apply text-neutral-500;
+    @apply mt-2;
+  }
+}
