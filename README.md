@@ -4,7 +4,8 @@
 
 1. [Muffibook](#muffibook)
 2. [Using the components](#using-the-components)
-   1. [Why not an NPM package?](#why-not-an-npm-package)
+   1. [Bash (zsh) function](#bash-zsh-function)
+   2. [Why not an NPM package?](#why-not-an-npm-package)
 3. [Developing](#developing)
    1. [Requirements](#requirements)
    2. [First time setup](#first-time-setup)
@@ -30,8 +31,24 @@ Ironically the easiest way\* to download a single component folder is by using s
 
 For instance to grab the `Button` use:
 
-- For rails: `svn export https://github.com/abtion/muffibook/trunk/components/Button app/packs/components/Button`
+- For rails: `svn export https://github.com/abtion/muffibook/trunk/components/Button app/javascript/components/Button`
 - For dotnet: `svn export https://github.com/abtion/muffibook/trunk/components/Button src/[PROJECT_NAME].FrontendReact/ClientApp/src/components/Button`
+
+## Bash (zsh) function
+
+The below function can be added to a `.bashrc` or `.zshrc` file to make grabbing components easier:
+
+```sh
+mbgrab() {
+  printf '%s\n' ${@:2} | xargs -I % svn export https://github.com/abtion/muffibook/trunk/components/% $1/% --force
+}
+```
+
+One or multiple components can then be fetched with `mbgrab destination components...` eg:
+
+```sh
+mbgrab app/javascript/components Button Input Alert
+```
 
 \*PR if you know a better way
 
