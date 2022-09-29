@@ -1,9 +1,9 @@
 import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
-import InformationCircleIcon from "@heroicons/react/solid/InformationCircleIcon"
-import CheckCircleIcon from "@heroicons/react/solid/CheckCircleIcon"
-import ExclamationIcon from "@heroicons/react/solid/ExclamationIcon"
-import XCircleIcon from "@heroicons/react/solid/XCircleIcon"
+import InformationCircleIcon from "@heroicons/react/20/solid/InformationCircleIcon"
+import CheckCircleIcon from "@heroicons/react/20/solid/CheckCircleIcon"
+import ExclamationTriangleIcon from "@heroicons/react/20/solid/ExclamationTriangleIcon"
+import XCircleIcon from "@heroicons/react/20/solid/XCircleIcon"
 
 import Alert from "~/components/Alert"
 import AlertIcon from "~/components/AlertIcon"
@@ -44,7 +44,11 @@ Warning.args = {
   variant: Variant.Warning,
   className: "flex",
   children: [
-    <AlertIcon icon={ExclamationIcon} variant={Variant.Warning} key="" />,
+    <AlertIcon
+      icon={ExclamationTriangleIcon}
+      variant={Variant.Warning}
+      key=""
+    />,
     "Alert text",
   ],
 }

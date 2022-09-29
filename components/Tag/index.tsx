@@ -1,7 +1,7 @@
 import React from "react"
 import classNames from "classnames"
 import "./index.scss"
-import XIcon from "@heroicons/react/solid/XIcon"
+import XMarkIcon from "@heroicons/react/20/solid/XMarkIcon"
 
 export interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
   text: string
@@ -20,7 +20,7 @@ export default function Tag(props: TagProps): JSX.Element {
       {text}
       {onClose && (
         <button className="Tag__close" onClick={onClose} aria-label="Close">
-          <XIcon />
+          <XMarkIcon />
         </button>
       )}
     </div>
