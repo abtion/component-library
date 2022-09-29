@@ -1,5 +1,5 @@
 import React from "react"
-import MailIcon from "@heroicons/react/solid/MailIcon"
+import EnvelopeIcon from "@heroicons/react/20/solid/EnvelopeIcon"
 
 import Input, { InputVariant } from "~/components/Input"
 import Button from "~/components/Button"
@@ -32,7 +32,7 @@ export const CombinedInputAndButton = (): JSX.Element => (
 export const InputWithIcon = (): JSX.Element => (
   <div className="relative">
     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-      <MailIcon className="h-5 w-5 text-neutral-400" aria-hidden="true" />
+      <EnvelopeIcon className="h-5 w-5 text-neutral-400" aria-hidden="true" />
     </div>
     <Input
       variant={InputVariant.Default}
