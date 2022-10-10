@@ -3677,9 +3677,9 @@
     form-data "^3.0.0"
 
 "@types/node@*":
-  version "18.8.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.8.0.tgz#b8ee8d83a99470c0661bd899417fcd77060682fe"
-  integrity sha512-u+h43R6U8xXDt2vzUaVP3VwjjLyOJk6uEciZS8OSyziUQGOwmk+l+4drxcsDboHXwyTaqS1INebghmWMRxq3LA==
+  version "18.8.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.8.3.tgz#ce750ab4017effa51aed6a7230651778d54e327c"
+  integrity sha512-0os9vz6BpGwxGe9LOhgP/ncvYN5Tx1fNcd2TM3rD/aCGBkysb+ZWpXEocG24h6ZzOi13+VB8HndAQFezsSOw1w==
 
 "@types/node@^14.0.10 || ^16.0.0", "@types/node@^14.14.20 || ^16.0.0":
   version "16.11.56"
@@ -9072,16 +9072,16 @@ jest-util@^29.0.2, jest-util@^29.0.3, jest-util@^29.1.2:
     picomatch "^2.2.3"
 
 jest-validate@^29.0.2, jest-validate@^29.0.3:
-  version "29.0.3"
-  resolved "https://registry.yarnpkg.com/jest-validate/-/jest-validate-29.0.3.tgz#f9521581d7344685428afa0a4d110e9c519aeeb6"
-  integrity sha512-OebiqqT6lK8cbMPtrSoS3aZP4juID762lZvpf1u+smZnwTEBCBInan0GAIIhv36MxGaJvmq5uJm7dl5gVt+Zrw==
+  version "29.1.2"
+  resolved "https://registry.yarnpkg.com/jest-validate/-/jest-validate-29.1.2.tgz#83a728b8f6354da2e52346878c8bc7383516ca51"
+  integrity sha512-k71pOslNlV8fVyI+mEySy2pq9KdXdgZtm7NHrBX8LghJayc3wWZH0Yr0mtYNGaCU4F1OLPXRkwZR0dBm/ClshA==
   dependencies:
-    "@jest/types" "^29.0.3"
+    "@jest/types" "^29.1.2"
     camelcase "^6.2.0"
     chalk "^4.0.0"
     jest-get-type "^29.0.0"
     leven "^3.1.0"
-    pretty-format "^29.0.3"
+    pretty-format "^29.1.2"
 
 jest-watcher@^29.0.2, jest-watcher@^29.0.3:
   version "29.1.2"
