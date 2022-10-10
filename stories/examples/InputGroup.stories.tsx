@@ -1,10 +1,8 @@
 import React from "react"
 import EnvelopeIcon from "@heroicons/react/20/solid/EnvelopeIcon"
 
-import Input, { InputVariant } from "~/components/Input"
+import Input from "~/components/Input"
 import Button from "~/components/Button"
-import Variant from "~/const/variant"
-import Size from "~/const/size"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -14,16 +12,12 @@ export default {
 export const CombinedInputAndButton = (): JSX.Element => (
   <div className="flex">
     <Input
-      variant={InputVariant.Default}
-      size={Size.Medium}
+      variant="default"
+      size="md"
       className="rounded-l-md"
       placeholder="Type here"
     />
-    <Button
-      variant={Variant.Primary}
-      size={Size.Medium}
-      className="rounded-r-md -ml-px"
-    >
+    <Button variant="primary" size="md" className="rounded-r-md -ml-px">
       Submit
     </Button>
   </div>
@@ -35,8 +29,8 @@ export const InputWithIcon = (): JSX.Element => (
       <EnvelopeIcon className="h-5 w-5 text-neutral-400" aria-hidden="true" />
     </div>
     <Input
-      variant={InputVariant.Default}
-      size={Size.Medium}
+      variant="default"
+      size="md"
       className="pl-10"
       placeholder="Type here"
     />

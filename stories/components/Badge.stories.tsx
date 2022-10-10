@@ -1,8 +1,7 @@
 import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 
-import Badge, { BadgeSize } from "~/components/Badge"
-import Variant from "~/const/variant"
+import Badge, { BadgeProps } from "~/components/Badge"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -13,8 +12,8 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Badge> = (args) => <Badge {...args} />
 
-const sharedProps = {
-  size: BadgeSize.Large,
+const sharedProps: Partial<BadgeProps> = {
+  size: "lg",
   text: "Badge text",
 }
 
@@ -22,35 +21,35 @@ const sharedProps = {
 export const Info = Template.bind({})
 Info.args = {
   ...sharedProps,
-  variant: Variant.Info,
+  variant: "info",
 }
 
 export const Success = Template.bind({})
 Success.args = {
   ...sharedProps,
-  variant: Variant.Success,
+  variant: "success",
 }
 
 export const Warning = Template.bind({})
 Warning.args = {
   ...sharedProps,
-  variant: Variant.Warning,
+  variant: "warning",
 }
 
 export const Danger = Template.bind({})
 Danger.args = {
   ...sharedProps,
-  variant: Variant.Danger,
+  variant: "danger",
 }
 
 export const Primary = Template.bind({})
 Primary.args = {
   ...sharedProps,
-  variant: Variant.Primary,
+  variant: "primary",
 }
 
 export const Neutral = Template.bind({})
 Neutral.args = {
   ...sharedProps,
-  variant: Variant.Neutral,
+  variant: "neutral",
 }

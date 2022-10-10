@@ -3,11 +3,8 @@ import { Link } from "react-router-dom"
 import classNames from "classnames"
 import "./index.scss"
 
-export enum ModalSize {
-  Small = "sm",
-  Medium = "md",
-  Large = "lg",
-}
+export const ModalSizes = ["sm", "md", "lg"] as const
+export type ModalSize = typeof ModalSizes[number]
 
 interface BaseProps {
   size: ModalSize
@@ -29,7 +26,7 @@ interface ModalPropsWithCloseHandler extends BaseProps {
   onClose: () => void
 }
 
-type ModalProps =
+export type ModalProps =
   | ModalPropsWithoutCloseButton
   | ModalPropsWithReturnUrl
   | ModalPropsWithCloseHandler

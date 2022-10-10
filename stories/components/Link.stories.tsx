@@ -1,7 +1,7 @@
 import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 
-import Link, { LinkVariant, LinkSize } from "~/components/Link"
+import Link, { LinkProps } from "~/components/Link"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -12,8 +12,8 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Link> = (args) => <Link {...args} />
 
-const sharedProps = {
-  size: LinkSize.Base,
+const sharedProps: Partial<LinkProps> = {
+  size: "bs",
   text: "Link text",
 }
 
@@ -26,19 +26,19 @@ Info.args = {
 export const Neutral = Template.bind({})
 Neutral.args = {
   ...sharedProps,
-  variant: LinkVariant.Neutral,
+  variant: "neutral",
 }
 
 export const NeutralLight = Template.bind({})
 NeutralLight.args = {
   ...sharedProps,
-  variant: LinkVariant.NeutralLight,
+  variant: "neutral-light",
 }
 
 export const NeutralDark = Template.bind({})
 NeutralDark.args = {
   ...sharedProps,
-  variant: LinkVariant.NeutralDark,
+  variant: "neutral-dark",
 }
 
 export const Underline = Template.bind({})

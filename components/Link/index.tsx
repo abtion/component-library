@@ -2,18 +2,16 @@ import React from "react"
 import classNames from "classnames"
 import "./index.scss"
 
-export enum LinkSize {
-  ExtraSmall = "xs",
-  Small = "sm",
-  Base = "bs",
-}
+export const LinkSizes = ["xs", "sm", "bs"] as const
+export type LinkSize = typeof LinkSizes[number]
 
-export enum LinkVariant {
-  Neutral = "neutral",
-  NeutralLight = "neutral-light",
-  NeutralDark = "neutral-dark",
-  Info = "info",
-}
+export const LinkVariants = [
+  "neutral",
+  "neutral-light",
+  "neutral-dark",
+  "info",
+] as const
+export type LinkVariant = typeof LinkVariants[number]
 
 export interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   variant?: LinkVariant

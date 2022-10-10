@@ -1,12 +1,11 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import Variant from "~/const/variant"
 
-import Badge, { BadgeProps, BadgeSize } from "."
+import Badge, { BadgeProps } from "."
 
 const defaultProps: BadgeProps = {
-  variant: Variant.Success,
-  size: BadgeSize.Small,
+  variant: "success",
+  size: "sm",
   text: "Badge text",
 }
 
@@ -21,9 +20,7 @@ describe(Badge, () => {
 
   describe("when size is set", () => {
     it("adds size class", () => {
-      const { getByText } = render(
-        <Badge {...defaultProps} size={BadgeSize.Small} />
-      )
+      const { getByText } = render(<Badge {...defaultProps} size="sm" />)
 
       const bagde = getByText(defaultProps.text as string)
 
@@ -34,7 +31,7 @@ describe(Badge, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { getByText } = render(
-        <Badge {...defaultProps} variant={Variant.Primary} />
+        <Badge {...defaultProps} variant="primary" />
       )
 
       const bagde = getByText(defaultProps.text as string)

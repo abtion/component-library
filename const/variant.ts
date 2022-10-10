@@ -1,10 +1,11 @@
-enum Variant {
-  Primary = "primary",
-  Neutral = "neutral",
-  Success = "success",
-  Danger = "danger",
-  Warning = "warning",
-  Info = "info",
-}
+const Variants = [
+  "primary",
+  "neutral",
+  "success",
+  "danger",
+  "warning",
+  "info",
+] as const
 
-export default Variant
+export type Variant = typeof Variants[number]
+export default Variants

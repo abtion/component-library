@@ -7,7 +7,6 @@ import XCircleIcon from "@heroicons/react/20/solid/XCircleIcon"
 
 import Alert from "~/components/Alert"
 import AlertIcon from "~/components/AlertIcon"
-import Variant from "~/const/variant"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -21,63 +20,59 @@ const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 export const Info = Template.bind({})
 Info.args = {
-  variant: Variant.Info,
+  variant: "info",
   className: "flex",
   children: [
-    <AlertIcon icon={InformationCircleIcon} variant={Variant.Info} key="" />,
+    <AlertIcon icon={InformationCircleIcon} variant="info" key="" />,
     "Alert text",
   ],
 }
 
 export const Success = Template.bind({})
 Success.args = {
-  variant: Variant.Success,
+  variant: "success",
   className: "flex",
   children: [
-    <AlertIcon icon={CheckCircleIcon} variant={Variant.Success} key="" />,
+    <AlertIcon icon={CheckCircleIcon} variant="success" key="" />,
     "Alert text",
   ],
 }
 
 export const Warning = Template.bind({})
 Warning.args = {
-  variant: Variant.Warning,
+  variant: "warning",
   className: "flex",
   children: [
-    <AlertIcon
-      icon={ExclamationTriangleIcon}
-      variant={Variant.Warning}
-      key=""
-    />,
+    <AlertIcon icon={ExclamationTriangleIcon} variant="warning" key="" />,
     "Alert text",
   ],
 }
 
 export const Danger = Template.bind({})
 Danger.args = {
-  variant: Variant.Danger,
+  variant: "danger",
   className: "flex",
   children: [
-    <AlertIcon icon={XCircleIcon} variant={Variant.Danger} key="" />,
+    <AlertIcon icon={XCircleIcon} variant="danger" key="" />,
     "Alert text",
   ],
 }
 
 export const Primary = Template.bind({})
 Primary.args = {
-  variant: Variant.Primary,
+  variant: "primary",
   children: "Alert text",
 }
 
 export const Neutral = Template.bind({})
 Neutral.args = {
-  variant: Variant.Neutral,
+  variant: "neutral",
   children: "Alert text",
 }
 
 export const WithoutCloseHandler = Template.bind({})
 WithoutCloseHandler.args = {
-  variant: Variant.Warning,
+  variant: "warning",
   children: "Alert text",
 }
 WithoutCloseHandler.parameters = {

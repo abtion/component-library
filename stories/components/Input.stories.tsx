@@ -1,8 +1,7 @@
 import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 
-import Input, { InputVariant } from "~/components/Input"
-import Size from "~/const/size"
+import Input, { InputProps, InputVariant } from "~/components/Input"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -13,9 +12,9 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />
 
-const baseProps = {
-  variant: InputVariant.Default,
-  size: Size.Medium,
+const baseProps: Partial<InputProps> = {
+  variant: "default" as InputVariant,
+  size: "md",
   placeholder: "Placeholder text",
   value: "",
   disabled: false,
@@ -31,11 +30,11 @@ export const Danger = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Danger.args = {
   ...baseProps,
-  variant: InputVariant.Error,
+  variant: "error",
 }
 
 export const Large = Template.bind({})
 Large.args = {
   ...baseProps,
-  size: Size.Large,
+  size: "lg",
 }

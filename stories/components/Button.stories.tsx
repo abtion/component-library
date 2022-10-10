@@ -1,9 +1,7 @@
 import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 
-import Button from "~/components/Button"
-import Variant from "~/const/variant"
-import Size from "~/const/size"
+import Button, { ButtonProps } from "~/components/Button"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -14,9 +12,9 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
-const sharedProps = {
+const sharedProps: Partial<ButtonProps> = {
   children: "Button text",
-  size: Size.Medium,
+  size: "md",
   disabled: false,
 }
 
@@ -24,7 +22,7 @@ const sharedProps = {
 export const Primary = Template.bind({})
 Primary.args = {
   ...sharedProps,
-  variant: Variant.Primary,
+  variant: "primary",
 }
 
 export const Secondary = Template.bind({})
@@ -36,31 +34,31 @@ Secondary.args = {
 export const Neutral = Template.bind({})
 Neutral.args = {
   ...sharedProps,
-  variant: Variant.Neutral,
+  variant: "neutral",
 }
 
 export const Success = Template.bind({})
 Success.args = {
   ...sharedProps,
-  variant: Variant.Success,
+  variant: "success",
 }
 
 export const Danger = Template.bind({})
 Danger.args = {
   ...sharedProps,
-  variant: Variant.Danger,
+  variant: "danger",
 }
 
 export const Warning = Template.bind({})
 Warning.args = {
   ...sharedProps,
-  variant: Variant.Warning,
+  variant: "warning",
 }
 
 export const Info = Template.bind({})
 Info.args = {
   ...sharedProps,
-  variant: Variant.Info,
+  variant: "info",
 }
 
 export const Basic = Template.bind({})

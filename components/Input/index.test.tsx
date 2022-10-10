@@ -19,7 +19,7 @@ describe(Input, () => {
   describe("when size is set", () => {
     it("adds size class", () => {
       const { getByPlaceholderText } = render(
-        <Input {...defaultProps} size={Size.Medium} />
+        <Input {...defaultProps} size="md" />
       )
 
       const input = getByPlaceholderText(defaultProps.placeholder as string)
@@ -31,7 +31,7 @@ describe(Input, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { getByPlaceholderText } = render(
-        <Input {...defaultProps} variant={InputVariant.Default} />
+        <Input {...defaultProps} variant="default" />
       )
 
       const input = getByPlaceholderText(defaultProps.placeholder as string)

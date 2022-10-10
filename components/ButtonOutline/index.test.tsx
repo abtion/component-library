@@ -1,6 +1,5 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import Variant from "~/const/variant"
 import Size from "~/const/size"
 
 import ButtonOutline, { ButtonOutlineProps } from "."
@@ -21,7 +20,7 @@ describe(ButtonOutline, () => {
   describe("when size is set", () => {
     it("adds size class", () => {
       const { getByText } = render(
-        <ButtonOutline {...defaultProps} size={Size.Medium} />
+        <ButtonOutline {...defaultProps} size="md" />
       )
 
       const button = getByText(defaultProps.children as string)
@@ -33,7 +32,7 @@ describe(ButtonOutline, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { getByText } = render(
-        <ButtonOutline {...defaultProps} variant={Variant.Primary} />
+        <ButtonOutline {...defaultProps} variant="primary" />
       )
 
       const button = getByText(defaultProps.children as string)
