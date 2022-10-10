@@ -1,6 +1,5 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import Size from "~/const/size"
 
 import ButtonOutline, { ButtonOutlineProps } from "."
 
