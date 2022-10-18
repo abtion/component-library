@@ -57,7 +57,7 @@ describe(Modal, () => {
 
       const closeButton = container.querySelector(".Modal__close")
 
-      if (closeButton) userEvent.click(closeButton)
+      if (closeButton) await userEvent.click(closeButton)
 
       await waitFor(() => expect(mockCallBack.mock.calls.length).toEqual(1))
     })

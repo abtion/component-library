@@ -39,6 +39,16 @@ module.exports = {
         "@typescript-eslint/no-var-requires": 0,
       },
     },
+    {
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ["./tsconfig.json"],
+      },
+      files: ["*.ts", "*.tsx"],
+      rules: {
+        "@typescript-eslint/no-floating-promises": ["error"],
+      },
+    },
   ],
   ignorePatterns: ["coverage/**/*", "storybook-static/**/*"],
 }

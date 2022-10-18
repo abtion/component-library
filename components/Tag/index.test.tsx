@@ -30,7 +30,7 @@ describe(Tag, () => {
 
       expect(closeHandler).not.toHaveBeenCalled()
 
-      userEvent.click(element)
+      await userEvent.click(element)
 
       await waitFor(() => expect(closeHandler).toHaveBeenCalled())
     })
