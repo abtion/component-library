@@ -2,7 +2,8 @@ name: CI
 
 on: [push]
 
-permissions: write-all
+permissions:
+  contents: write
 
 jobs:
   stylelint:
