@@ -23,7 +23,7 @@ describe(Duration, () => {
 
       expect(getByText("48:00")).toBeInTheDocument()
 
-      act(() => {
+      await act(() => {
         jest.advanceTimersByTime(3600 * 1000)
       })
 
