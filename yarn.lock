@@ -1899,13 +1899,6 @@
   dependencies:
     "@sinclair/typebox" "^0.25.16"
 
-"@jest/schemas@^29.4.2":
-  version "29.4.2"
-  resolved "https://registry.yarnpkg.com/@jest/schemas/-/schemas-29.4.2.tgz#cf7cfe97c5649f518452b176c47ed07486270fc1"
-  integrity sha512-ZrGzGfh31NtdVH8tn0mgJw4khQuNHiKqdzJAFbCaERbyCP9tHlxWuL/mnMu8P7e/+k4puWjI1NOzi/sFsjce/g==
-  dependencies:
-    "@sinclair/typebox" "^0.25.16"
-
 "@jest/source-map@^29.2.0":
   version "29.2.0"
   resolved "https://registry.yarnpkg.com/@jest/source-map/-/source-map-29.2.0.tgz#ab3420c46d42508dcc3dc1c6deee0b613c235744"
@@ -9369,16 +9362,7 @@ jest-message-util@^29.4.2:
     slash "^3.0.0"
     stack-utils "^2.0.3"
 
-jest-mock@^29.0.2, jest-mock@^29.3.1:
-  version "29.4.2"
-  resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-29.4.2.tgz#e1054be66fb3e975d26d4528fcde6979e4759de8"
-  integrity sha512-x1FSd4Gvx2yIahdaIKoBjwji6XpboDunSJ95RpntGrYulI1ByuYQCKN/P7hvk09JB74IonU3IPLdkutEWYt++g==
-  dependencies:
-    "@jest/types" "^29.4.2"
-    "@types/node" "*"
-    jest-util "^29.4.2"
-
-jest-mock@^29.4.2:
+jest-mock@^29.0.2, jest-mock@^29.3.1, jest-mock@^29.4.2:
   version "29.4.2"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-29.4.2.tgz#e1054be66fb3e975d26d4528fcde6979e4759de8"
   integrity sha512-x1FSd4Gvx2yIahdaIKoBjwji6XpboDunSJ95RpntGrYulI1ByuYQCKN/P7hvk09JB74IonU3IPLdkutEWYt++g==
@@ -10178,9 +10162,9 @@ mem@^8.1.1:
     mimic-fn "^3.1.0"
 
 memfs@^3.1.2, memfs@^3.2.2:
-  version "3.4.7"
-  resolved "https://registry.yarnpkg.com/memfs/-/memfs-3.4.7.tgz#e5252ad2242a724f938cb937e3c4f7ceb1f70e5a"
-  integrity sha512-ygaiUSNalBX85388uskeCyhSAoOSgzBbtVCr9jA2RROssFL9Q19/ZXFqS+2Th2sr1ewNIWgFdLzLC3Yl1Zv+lw==
+  version "3.4.13"
+  resolved "https://registry.yarnpkg.com/memfs/-/memfs-3.4.13.tgz#248a8bd239b3c240175cd5ec548de5227fc4f345"
+  integrity sha512-omTM41g3Skpvx5dSYeZIbXKcXoAVc/AoMNwn9TKx++L/gaen/+4TTttmu8ZSch5vfVJ8uJvGbroTsIlslRg6lg==
   dependencies:
     fs-monkey "^1.0.3"
 
