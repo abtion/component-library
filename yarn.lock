@@ -1899,13 +1899,6 @@
   dependencies:
     "@sinclair/typebox" "^0.25.16"
 
-"@jest/schemas@^29.4.2":
-  version "29.4.2"
-  resolved "https://registry.yarnpkg.com/@jest/schemas/-/schemas-29.4.2.tgz#cf7cfe97c5649f518452b176c47ed07486270fc1"
-  integrity sha512-ZrGzGfh31NtdVH8tn0mgJw4khQuNHiKqdzJAFbCaERbyCP9tHlxWuL/mnMu8P7e/+k4puWjI1NOzi/sFsjce/g==
-  dependencies:
-    "@sinclair/typebox" "^0.25.16"
-
 "@jest/source-map@^29.2.0":
   version "29.2.0"
   resolved "https://registry.yarnpkg.com/@jest/source-map/-/source-map-29.2.0.tgz#ab3420c46d42508dcc3dc1c6deee0b613c235744"
@@ -9369,16 +9362,7 @@ jest-message-util@^29.4.2:
     slash "^3.0.0"
     stack-utils "^2.0.3"
 
-jest-mock@^29.0.2, jest-mock@^29.3.1:
-  version "29.4.2"
-  resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-29.4.2.tgz#e1054be66fb3e975d26d4528fcde6979e4759de8"
-  integrity sha512-x1FSd4Gvx2yIahdaIKoBjwji6XpboDunSJ95RpntGrYulI1ByuYQCKN/P7hvk09JB74IonU3IPLdkutEWYt++g==
-  dependencies:
-    "@jest/types" "^29.4.2"
-    "@types/node" "*"
-    jest-util "^29.4.2"
-
-jest-mock@^29.4.2:
+jest-mock@^29.0.2, jest-mock@^29.3.1, jest-mock@^29.4.2:
   version "29.4.2"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-29.4.2.tgz#e1054be66fb3e975d26d4528fcde6979e4759de8"
   integrity sha512-x1FSd4Gvx2yIahdaIKoBjwji6XpboDunSJ95RpntGrYulI1ByuYQCKN/P7hvk09JB74IonU3IPLdkutEWYt++g==
@@ -10724,27 +10708,7 @@ object-visit@^1.0.0:
   dependencies:
     isobject "^3.0.0"
 
-object.assign@^4.1.0:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.2.tgz#0ed54a342eceb37b38ff76eb831a0e788cb63940"
-  integrity sha512-ixT2L5THXsApyiUPYKmW+2EHpXXe5Ii3M+f4e+aJFAHao5amFRW6J0OO6c/LU8Be47utCx2GL89hxGB6XSmKuQ==
-  dependencies:
-    call-bind "^1.0.0"
-    define-properties "^1.1.3"
-    has-symbols "^1.0.1"
-    object-keys "^1.1.1"
-
-object.assign@^4.1.2:
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.3.tgz#d36b7700ddf0019abb6b1df1bb13f6445f79051f"
-  integrity sha512-ZFJnX3zltyjcYJL0RoCJuzb+11zWGyaDbjgxZbdV7rFEcHQuYxrZqhow67aA7xpes6LhojyFDaBKAFfogQrikA==
-  dependencies:
-    call-bind "^1.0.2"
-    define-properties "^1.1.4"
-    has-symbols "^1.0.3"
-    object-keys "^1.1.1"
-
-object.assign@^4.1.4:
+object.assign@^4.1.0, object.assign@^4.1.2, object.assign@^4.1.4:
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.4.tgz#9673c7c7c351ab8c4d0b516f4343ebf4dfb7799f"
   integrity sha512-1mxKf0e58bvyjSCtKYY4sRe9itRk3PJpquJOjeIkz885CczcI4IvJJDLPS72oowuSh+pBxUFROpX+TU++hxhZQ==
