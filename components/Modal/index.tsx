@@ -4,7 +4,7 @@ import classNames from "classnames"
 import "./index.scss"
 
 export const ModalSizes = ["sm", "md", "lg"] as const
-export type ModalSize = typeof ModalSizes[number]
+export type ModalSize = (typeof ModalSizes)[number]
 
 interface BaseProps {
   size: ModalSize

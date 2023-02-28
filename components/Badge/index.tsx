@@ -4,7 +4,7 @@ import { Variant } from "~/const/variant"
 import "./index.scss"
 
 export const BadgeSizes = ["sm", "lg"] as const
-export type BadgeSize = typeof BadgeSizes[number]
+export type BadgeSize = (typeof BadgeSizes)[number]
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   size: BadgeSize
