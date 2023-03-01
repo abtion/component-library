@@ -1,8 +1,6 @@
-![Muffi Book](muffi-book.gif)
+# Abtion Design System
 
-# Muffibook
-
-1. [Muffibook](#muffibook)
+1. [Abtion Design System](#abtion-design-system)
 2. [Using the components](#using-the-components)
    1. [Bash (zsh) function](#bash-zsh-function)
    2. [Why not an NPM package?](#why-not-an-npm-package)
@@ -16,10 +14,14 @@
 
 The Abtion way of reusing UI across projects.
 
-Muffibook is a repository for well-tested reusable react components, with a publicly available storybook frontend.
+The Abtion Design System - also known as **_Muffibook_** - is a repository for well-tested reusable react components, with a publicly available storybook frontend.
+
+It also serves as an example of our shared javascript standards between projects on different tech stacks.
 
 - App: [muffibook.abtion.com](https://muffibook.abtion.com)
 - CI: Github actions
+
+![muffibook](muffi-book.gif)
 
 # Using the components
 
@@ -27,12 +29,12 @@ If you decide to use one of the components on your projects, you simply download
 
 Ironically the easiest way\* to download a single component folder is by using subversion (available with homebrew / apt / etc.):
 
-`svn export https://github.com/abtion/muffibook/trunk/components/[NAME_OF_COMPONENT] [OUTPUT_FOLDER]`
+`svn export https://github.com/abtion/design-system/trunk/components/[NAME_OF_COMPONENT] [OUTPUT_FOLDER]`
 
 For instance to grab the `Button` use:
 
-- For rails: `svn export https://github.com/abtion/muffibook/trunk/components/Button app/javascript/components/Button`
-- For dotnet: `svn export https://github.com/abtion/muffibook/trunk/components/Button src/[PROJECT_NAME].FrontendReact/ClientApp/src/components/Button`
+- For rails: `svn export https://github.com/abtion/design-system/trunk/components/Button app/javascript/components/Button`
+- For dotnet: `svn export https://github.com/abtion/design-system/trunk/components/Button src/[PROJECT_NAME].FrontendReact/ClientApp/src/components/Button`
 
 ## Bash (zsh) function
 
@@ -40,7 +42,7 @@ The below function can be added to a `.bashrc` or `.zshrc` file to make grabbing
 
 ```sh
 mbgrab() {
-  printf '%s\n' ${@:2} | xargs -I % svn export https://github.com/abtion/muffibook/trunk/components/% $1/% --force
+  printf '%s\n' ${@:2} | xargs -I % svn export https://github.com/abtion/design-system/trunk/components/% $1/% --force
 }
 ```
 
@@ -58,7 +60,7 @@ We would have to do versioning on that package, and we would risk breaking proje
 
 In short we work this way because it allows us to move fast without breaking too much stuff.
 
-Should muffibook stabilize and expand to a point where this workflow becomes tedious, we might reconsider it.
+Should the design system stabilize and expand to a point where this workflow becomes tedious, we might reconsider it.
 
 # Developing
 
