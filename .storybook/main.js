@@ -8,9 +8,6 @@ module.exports = {
     "@whitespace/storybook-addon-html",
     "@storybook/addon-a11y",
   ],
-  core: {
-    builder: "webpack5",
-  },
   webpackFinal: (config) => {
     return {
       ...config,
@@ -21,10 +18,6 @@ module.exports = {
         // This allows overriding default component styling using tailwind
         "./main.scss",
       ],
-      output: {
-        ...config.output,
-        publicPath: "/",
-      },
       resolve: {
         ...config.resolve,
         alias: {
@@ -68,5 +61,12 @@ module.exports = {
       },
       plugins: [...config.plugins],
     }
+  },
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
+  },
+  docs: {
+    autodocs: true,
   },
 }
