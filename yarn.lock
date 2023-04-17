@@ -7835,67 +7835,7 @@ jest-runtime@^29.5.0:
     slash "^3.0.0"
     strip-bom "^4.0.0"
 
-jest-snapshot@^29.3.1:
-  version "29.3.1"
-  resolved "https://registry.yarnpkg.com/jest-snapshot/-/jest-snapshot-29.3.1.tgz#17bcef71a453adc059a18a32ccbd594b8cc4e45e"
-  integrity sha512-+3JOc+s28upYLI2OJM4PWRGK9AgpsMs/ekNryUV0yMBClT9B1DF2u2qay8YxcQd338PPYSFNb0lsar1B49sLDA==
-  dependencies:
-    "@babel/core" "^7.11.6"
-    "@babel/generator" "^7.7.2"
-    "@babel/plugin-syntax-jsx" "^7.7.2"
-    "@babel/plugin-syntax-typescript" "^7.7.2"
-    "@babel/traverse" "^7.7.2"
-    "@babel/types" "^7.3.3"
-    "@jest/expect-utils" "^29.3.1"
-    "@jest/transform" "^29.3.1"
-    "@jest/types" "^29.3.1"
-    "@types/babel__traverse" "^7.0.6"
-    "@types/prettier" "^2.1.5"
-    babel-preset-current-node-syntax "^1.0.0"
-    chalk "^4.0.0"
-    expect "^29.3.1"
-    graceful-fs "^4.2.9"
-    jest-diff "^29.3.1"
-    jest-get-type "^29.2.0"
-    jest-haste-map "^29.3.1"
-    jest-matcher-utils "^29.3.1"
-    jest-message-util "^29.3.1"
-    jest-util "^29.3.1"
-    natural-compare "^1.4.0"
-    pretty-format "^29.3.1"
-    semver "^7.3.5"
-
-jest-snapshot@^29.4.2:
-  version "29.4.2"
-  resolved "https://registry.yarnpkg.com/jest-snapshot/-/jest-snapshot-29.4.2.tgz#ba1fb9abb279fd2c85109ff1757bc56b503bbb3a"
-  integrity sha512-PdfubrSNN5KwroyMH158R23tWcAXJyx4pvSvWls1dHoLCaUhGul9rsL3uVjtqzRpkxlkMavQjGuWG1newPgmkw==
-  dependencies:
-    "@babel/core" "^7.11.6"
-    "@babel/generator" "^7.7.2"
-    "@babel/plugin-syntax-jsx" "^7.7.2"
-    "@babel/plugin-syntax-typescript" "^7.7.2"
-    "@babel/traverse" "^7.7.2"
-    "@babel/types" "^7.3.3"
-    "@jest/expect-utils" "^29.4.2"
-    "@jest/transform" "^29.4.2"
-    "@jest/types" "^29.4.2"
-    "@types/babel__traverse" "^7.0.6"
-    "@types/prettier" "^2.1.5"
-    babel-preset-current-node-syntax "^1.0.0"
-    chalk "^4.0.0"
-    expect "^29.4.2"
-    graceful-fs "^4.2.9"
-    jest-diff "^29.4.2"
-    jest-get-type "^29.4.2"
-    jest-haste-map "^29.4.2"
-    jest-matcher-utils "^29.4.2"
-    jest-message-util "^29.4.2"
-    jest-util "^29.4.2"
-    natural-compare "^1.4.0"
-    pretty-format "^29.4.2"
-    semver "^7.3.5"
-
-jest-snapshot@^29.5.0:
+jest-snapshot@^29.3.1, jest-snapshot@^29.4.2, jest-snapshot@^29.5.0:
   version "29.5.0"
   resolved "https://registry.yarnpkg.com/jest-snapshot/-/jest-snapshot-29.5.0.tgz#c9c1ce0331e5b63cd444e2f95a55a73b84b1e8ce"
   integrity sha512-x7Wolra5V0tt3wRs3/ts3S6ciSQVypgGQlJpz2rsdQYoUKxMxPNaoHMGJN6qAuPJqS+2iQ1ZUn5kl7HCyls84g==
