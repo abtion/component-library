@@ -119,5 +119,7 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: yarn
         run: yarn --frozen-lockfile
-      - name: deploy to github pages
-        run: yarn deploy --ci
+      - name: Build and deploy Storybook
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./storybook-static
