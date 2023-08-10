@@ -51,5 +51,9 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: ["coverage/**/*", "storybook-static/**/*"],
+  ignorePatterns: [
+    "coverage/**/*",
+    "storybook-static/**/*",
+    "components/**/dist/**/*",
+  ],
 }
