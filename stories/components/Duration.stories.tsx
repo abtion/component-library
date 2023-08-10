@@ -1,7 +1,7 @@
 import React from "react"
 import { StoryFn, Meta } from "@storybook/react"
 
-import Duration from "~/components/Duration"
+import Duration from "~/components/Duration/src"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

@@ -5,8 +5,8 @@ import CheckCircleIcon from "@heroicons/react/20/solid/CheckCircleIcon"
 import ExclamationTriangleIcon from "@heroicons/react/20/solid/ExclamationTriangleIcon"
 import XCircleIcon from "@heroicons/react/20/solid/XCircleIcon"
 
-import Alert from "~/components/Alert"
-import AlertIcon from "~/components/AlertIcon"
+import Alert from "~/components/Alert/src"
+import AlertIcon from "~/components/AlertIcon/src"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

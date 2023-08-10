@@ -1,7 +1,7 @@
 import React from "react"
 import { StoryFn, Meta } from "@storybook/react"
 
-import Tag from "~/components/Tag"
+import Tag from "~/components/Tag/src"
 import { action } from "@storybook/addon-actions"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

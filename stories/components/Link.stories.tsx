@@ -1,7 +1,7 @@
 import React from "react"
 import { StoryFn, Meta } from "@storybook/react"
 
-import Link, { LinkProps } from "~/components/Link"
+import Link, { LinkProps } from "~/components/Link/src"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

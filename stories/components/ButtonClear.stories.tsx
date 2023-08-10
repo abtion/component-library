@@ -1,7 +1,7 @@
 import React from "react"
 import { StoryFn, Meta } from "@storybook/react"
 
-import ButtonClear, { ButtonClearProps } from "~/components/ButtonClear"
+import ButtonClear, { ButtonClearProps } from "~/components/ButtonClear/src"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

@@ -1,8 +1,8 @@
 import React from "react"
 import EnvelopeIcon from "@heroicons/react/20/solid/EnvelopeIcon"
 
-import Input from "~/components/Input"
-import Button from "~/components/Button"
+import Input from "~/components/Input/src"
+import Button from "~/components/Button/src"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

@@ -1,9 +1,9 @@
 import React from "react"
 import { StoryFn, Meta } from "@storybook/react"
 
-import Modal from "~/components/Modal"
-import ModalContent from "~/components/ModalContent"
-import ModalTop from "~/components/ModalTop"
+import Modal from "~/components/Modal/src"
+import ModalContent from "~/components/ModalContent/src"
+import ModalTop from "~/components/ModalTop/src"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

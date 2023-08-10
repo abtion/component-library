@@ -1,9 +1,9 @@
 import React from "react"
 import { StoryFn, Meta } from "@storybook/react"
 
-import Modal from "~/components/Modal"
-import ModalTop from "~/components/ModalTop"
-import ModalContent from "~/components/ModalContent"
+import Modal from "~/components/Modal/src"
+import ModalTop from "~/components/ModalTop/src"
+import ModalContent from "~/components/ModalContent/src"
 import { Router } from "react-router"
 import { Routes, Route } from "react-router-dom"
 import { createMemoryHistory } from "history"

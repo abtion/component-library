@@ -1,7 +1,9 @@
 import React from "react"
 import { StoryFn, Meta } from "@storybook/react"
 
-import ButtonOutline, { ButtonOutlineProps } from "~/components/ButtonOutline"
+import ButtonOutline, {
+  ButtonOutlineProps,
+} from "~/components/ButtonOutline/src"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
