@@ -90,7 +90,9 @@
     "lint-style": "stylelint ./**/*.scss",
     "lint-eslint": "eslint .",
     "lint-prettier": "prettier . --check",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "build:components": "parcel build 'components/*/' --no-cache",
+    "clean": "yarn workspaces foreach -pv run clean"
   },
   "browserslist": [
     "last 2 Chrome versions",
