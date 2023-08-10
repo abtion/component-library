@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { StoryFn, Meta } from "@storybook/react"
 
 import Tag from "~/components/Tag"
 import { action } from "@storybook/addon-actions"
@@ -8,10 +8,10 @@ import { action } from "@storybook/addon-actions"
 export default {
   title: "Components/✅ Tag",
   component: Tag,
-} as ComponentMeta<typeof Tag>
+} as Meta<typeof Tag>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Tag> = (args) => <Tag {...args} />
+const Template: StoryFn<typeof Tag> = (args) => <Tag {...args} />
 
 const sharedProps = {
   text: "Tag text",

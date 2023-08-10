@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { StoryFn, Meta } from "@storybook/react"
 import InformationCircleIcon from "@heroicons/react/20/solid/InformationCircleIcon"
 import CheckCircleIcon from "@heroicons/react/20/solid/CheckCircleIcon"
 import ExclamationTriangleIcon from "@heroicons/react/20/solid/ExclamationTriangleIcon"
@@ -12,10 +12,10 @@ import AlertIcon from "~/components/AlertIcon"
 export default {
   title: "Components/✅ Alert",
   component: Alert,
-} as ComponentMeta<typeof Alert>
+} as Meta<typeof Alert>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />
+const Template: StoryFn<typeof Alert> = (args) => <Alert {...args} />
 
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 export const Info = Template.bind({})

@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { StoryFn, Meta } from "@storybook/react"
 
 import Badge, { BadgeProps } from "~/components/Badge"
 
@@ -7,10 +7,10 @@ import Badge, { BadgeProps } from "~/components/Badge"
 export default {
   title: "Components/✅ Badge",
   component: Badge,
-} as ComponentMeta<typeof Badge>
+} as Meta<typeof Badge>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Badge> = (args) => <Badge {...args} />
+const Template: StoryFn<typeof Badge> = (args) => <Badge {...args} />
 
 const sharedProps: Partial<BadgeProps> = {
   size: "lg",

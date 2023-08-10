@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { StoryFn, Meta } from "@storybook/react"
 
 import ButtonClear, { ButtonClearProps } from "~/components/ButtonClear"
 
@@ -7,10 +7,10 @@ import ButtonClear, { ButtonClearProps } from "~/components/ButtonClear"
 export default {
   title: "Components/✅ ButtonClear",
   component: ButtonClear,
-} as ComponentMeta<typeof ButtonClear>
+} as Meta<typeof ButtonClear>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof ButtonClear> = (args) => (
+const Template: StoryFn<typeof ButtonClear> = (args) => (
   <ButtonClear {...args} />
 )
 

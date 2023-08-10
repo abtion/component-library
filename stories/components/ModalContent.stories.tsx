@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { StoryFn, Meta } from "@storybook/react"
 
 import Modal from "~/components/Modal"
 import ModalContent from "~/components/ModalContent"
@@ -14,10 +14,10 @@ export default {
       inlineStories: false,
     },
   },
-} as ComponentMeta<typeof ModalContent>
+} as Meta<typeof ModalContent>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Modal> = (args) => (
+const Template: StoryFn<typeof Modal> = (args) => (
   <Modal size="md">
     <ModalTop>Top</ModalTop>
     <ModalContent {...args} />

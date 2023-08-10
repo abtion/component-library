@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { StoryFn, Meta } from "@storybook/react"
 
 import Button, { ButtonProps } from "~/components/Button"
 
@@ -7,10 +7,10 @@ import Button, { ButtonProps } from "~/components/Button"
 export default {
   title: "Components/✅ Button",
   component: Button,
-} as ComponentMeta<typeof Button>
+} as Meta<typeof Button>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
+const Template: StoryFn<typeof Button> = (args) => <Button {...args} />
 
 const sharedProps: Partial<ButtonProps> = {
   children: "Button text",

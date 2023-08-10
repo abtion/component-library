@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { StoryFn, Meta } from "@storybook/react"
 
 import Input, { InputProps, InputVariant } from "~/components/Input"
 
@@ -7,10 +7,10 @@ import Input, { InputProps, InputVariant } from "~/components/Input"
 export default {
   title: "Components/🚧 Input",
   component: Input,
-} as ComponentMeta<typeof Input>
+} as Meta<typeof Input>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />
+const Template: StoryFn<typeof Input> = (args) => <Input {...args} />
 
 const baseProps: Partial<InputProps> = {
   variant: "default" as InputVariant,

@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { StoryFn, Meta } from "@storybook/react"
 
 import Duration from "~/components/Duration"
 
@@ -7,12 +7,10 @@ import Duration from "~/components/Duration"
 export default {
   title: "Components/✅ Duration",
   component: Duration,
-} as ComponentMeta<typeof Duration>
+} as Meta<typeof Duration>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Duration> = (args) => (
-  <Duration {...args} />
-)
+const Template: StoryFn<typeof Duration> = (args) => <Duration {...args} />
 
 const startDate = new Date(Date.now() - 600000)
 
