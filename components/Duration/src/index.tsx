@@ -1,7 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import { Duration as LuxonDuration } from "luxon"
-import useInterval from "~/hooks/useInterval"
+import useInterval from "../hooks/useInterval"
 
 const oneSecondMs = 1000
 const oneMinuteMs = 60 * oneSecondMs

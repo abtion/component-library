@@ -1,5 +1,5 @@
 import React from "react"
-import useInterval from "./useInterval"
+import useInterval from "."
 import { render } from "@testing-library/react"
 
 describe(useInterval, () => {
