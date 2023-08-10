@@ -2,6 +2,9 @@
   "name": "abtion-design-system",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "components/*"
+  ],
   "dependencies": {
     "@babel/preset-typescript": "^7.15.0",
     "@heroicons/react": "^2.0.13",
