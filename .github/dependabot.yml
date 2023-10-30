@@ -6,6 +6,19 @@ updates:
       interval: "weekly"
     allow:
       - dependency-type: "all"
+    groups:
+      storybook:
+        patterns:
+        - storybook
+        - @storybook/*
+        update-types:
+        - "minor"
+        - "patch"
+    ignore:
+    - dependency-name: "@storybook/*"
+      update-types: ["version-update:semver-major"]
+    - dependency-name: "storybook"
+      update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
