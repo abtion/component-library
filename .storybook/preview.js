@@ -1,5 +1,6 @@
 import prepareColorVariables from "../utils/prepareColorVariables"
 import colors from "../colors.json"
+import MuffibookTheme from "./MuffibookTheme"
 
 const cssRoot = document.querySelector(":root")
 const cssVariables = prepareColorVariables(colors).cssVariables
@@ -17,6 +18,7 @@ export const parameters = {
     },
   },
   docs: {
+    theme: MuffibookTheme,
     source: {
       state: "open",
     },
