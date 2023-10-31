@@ -104,8 +104,6 @@ jobs:
       - prettier
       - jest
     if: success() && github.ref == 'refs/heads/main'
-    env:
-      GH_TOKEN: abtion-internal-projects:${{ secrets.DEPLOYMENT_TOKEN }}
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
@@ -119,7 +117,10 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: yarn
         run: yarn --frozen-lockfile
-      - name: Build and deploy Storybook
+      - name: Build Storybook
+        run: yarn build
+      - name: Deploy Storybook
         uses: peaceiris/actions-gh-pages@v3
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./storybook-static
