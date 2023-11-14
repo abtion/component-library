@@ -1,4 +1,5 @@
 const path = require("path")
+const { cascadeLayerPrefixer } = require("../utils/cascadeLayerPrefixer")
 
 module.exports = {
   stories: ["../stories/Introduction.stories.mdx", "../stories/**/*stories*"],
@@ -49,7 +50,14 @@ module.exports = {
                 loader: "postcss-loader",
                 options: {
                   postcssOptions: {
-                    plugins: [require("tailwindcss"), require("autoprefixer")],
+                    plugins: [
+                      require("tailwindcss"),
+                      cascadeLayerPrefixer({
+                        layerName: "components",
+                        fileNameMatcher: /\/components\/.+/,
+                      }),
+                      require("autoprefixer"),
+                    ],
                   },
                 },
               },
