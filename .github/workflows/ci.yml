@@ -11,14 +11,10 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - name: get yarn cache directory path
-        id: yarn-cache
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-      - name: Setup cache key and directory for node_modules cache
-        uses: actions/cache@v3.3.2
+      - uses: actions/setup-node@v3
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          node-version-file: ".tool-versions"
+          cache: "yarn"
       - name: yarn
         run: yarn --frozen-lockfile
       - name: stylelint
@@ -29,14 +25,10 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - name: get yarn cache directory path
-        id: yarn-cache
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-      - name: Setup cache key and directory for node_modules cache
-        uses: actions/cache@v3.3.2
+      - uses: actions/setup-node@v3
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          node-version-file: ".tool-versions"
+          cache: "yarn"
       - name: yarn
         run: yarn --frozen-lockfile
       - name: lint
@@ -47,14 +39,10 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - name: get yarn cache directory path
-        id: yarn-cache
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-      - name: Setup cache key and directory for node_modules cache
-        uses: actions/cache@v3.3.2
+      - uses: actions/setup-node@v3
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          node-version-file: ".tool-versions"
+          cache: "yarn"
       - name: yarn
         run: yarn --frozen-lockfile
       - name: prettier
@@ -65,14 +53,10 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - name: get yarn cache directory path
-        id: yarn-cache
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-      - name: Setup cache key and directory for node_modules cache
-        uses: actions/cache@v3.3.2
+      - uses: actions/setup-node@v3
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          node-version-file: ".tool-versions"
+          cache: "yarn"
       - name: yarn
         run: yarn --frozen-lockfile
       - name: test
@@ -84,14 +68,10 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - name: get yarn cache directory path
-        id: yarn-cache
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-      - name: Setup cache key and directory for node_modules cache
-        uses: actions/cache@v3.3.2
+      - uses: actions/setup-node@v3
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          node-version-file: ".tool-versions"
+          cache: "yarn"
       - name: yarn
         run: yarn --frozen-lockfile
       - name: build
@@ -108,14 +88,10 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - name: get yarn cache directory path
-        id: yarn-cache
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-      - name: Setup cache key and directory for node_modules cache
-        uses: actions/cache@v3.3.2
+      - uses: actions/setup-node@v3
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          node-version-file: ".tool-versions"
+          cache: "yarn"
       - name: yarn
         run: yarn --frozen-lockfile
       - name: Build Storybook
