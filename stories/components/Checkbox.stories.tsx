@@ -27,7 +27,7 @@ Default.args = {
 
 export const CheckboxWithLabel = (): JSX.Element => (
   <label>
-    <Checkbox className="mr-2" />
-    <span className="select-none">Checkbox label</span>
+    <Checkbox className="mr-2 align-middle" />
+    <span className="select-none align-middle">Checkbox label</span>
   </label>
 )
