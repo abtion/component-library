@@ -1,12 +1,12 @@
 .RadioButton {
-  @apply appearance-none inline-flex items-center justify-center w-4 h-4 bg-white border-neutral-300 border rounded-full border-[1px] outline-none;
+  @apply appearance-none inline-flex items-center justify-center w-4 h-4 bg-white border-neutral-300 border rounded-full border-[1px] transition-colors outline-none;
 
   &:focus {
     @apply ring-2 ring-offset-2 ring-primary-400;
   }
 
   &::before {
-    @apply block bg-transparent w-[6px] h-[6px] rounded-full;
+    @apply block bg-transparent w-[6px] h-[6px] rounded-full scale-0 transition-transform;
     content: "";
   }
 
@@ -14,7 +14,7 @@
     @apply border-none bg-primary-500;
 
     &::before {
-      @apply bg-white;
+      @apply bg-white scale-100;
     }
   }
 
