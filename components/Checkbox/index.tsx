@@ -2,9 +2,6 @@ import React from "react"
 import classNames from "classnames"
 import "./index.scss"
 
-const CheckboxVariants = ["default", "rounded"] as const
-export type CheckboxVariant = (typeof CheckboxVariants)[number]
-
 export type CheckboxProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
   "size"

@@ -1,7 +1,7 @@
 import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 
-import Checkbox, { InputProps, CheckboxVariant } from "~/components/Checkbox"
+import Checkbox, { CheckboxProps } from "~/components/Checkbox"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -14,8 +14,7 @@ const Template: ComponentStory<typeof Checkbox> = (args) => (
   <Checkbox {...args} />
 )
 
-const baseProps: Partial<InputProps> = {
-  variant: "default" as CheckboxVariant,
+const baseProps: Partial<CheckboxProps> = {
   checked: false,
   disabled: false,
 }
@@ -24,13 +23,6 @@ export const Default = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Default.args = {
   ...baseProps,
-}
-
-export const Rounded = Template.bind({})
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Rounded.args = {
-  ...baseProps,
-  variant: "rounded",
 }
 
 export const CheckboxWithLabel = (): JSX.Element => (
