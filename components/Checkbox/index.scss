@@ -2,8 +2,12 @@
   // @apply border border-transparent text-base leading-4 focus:ring-1 focus:outline-none shadow-sm;
   @apply appearance-none inline-flex items-center justify-center w-4 h-4 bg-white border-neutral-300 border rounded-sm border-[1px] outline-none;
 
+  &:hover {
+    @apply rounded-[4px];
+  }
+
   &:focus {
-    @apply ring-2 ring-offset-2 ring-primary-400;
+    @apply ring-2 ring-offset-2 ring-primary-400 rounded-[4px];
   }
 
   &::before {
@@ -12,7 +16,7 @@
   }
 
   &:checked {
-    @apply border-none bg-primary-500;
+    @apply border-none bg-primary-500 rounded-[4px];
 
     &::before {
       @apply text-white;
@@ -26,10 +30,5 @@
     &:checked {
       @apply bg-neutral-300;
     }
-  }
-
-  // Variants
-  &--rounded {
-    @apply rounded-[4px];
   }
 }

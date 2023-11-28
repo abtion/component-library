@@ -5,21 +5,15 @@ import "./index.scss"
 const CheckboxVariants = ["default", "rounded"] as const
 export type CheckboxVariant = (typeof CheckboxVariants)[number]
 
-export interface CheckboxProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
-  variant?: CheckboxVariant
-}
+export type CheckboxProps = Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  "size"
+>
 
 export default function Checkbox(props: CheckboxProps): JSX.Element {
-  const { variant, className, ...rest } = props
+  const { className, ...rest } = props
 
-  const usedClassName = classNames(
-    "Checkbox",
-    {
-      [`Checkbox--${variant}`]: variant,
-    },
-    className
-  )
+  const usedClassName = classNames("Checkbox", className)
 
   return <input type="checkbox" className={usedClassName} {...rest} />
 }

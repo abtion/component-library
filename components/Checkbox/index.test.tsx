@@ -7,15 +7,11 @@ const defaultProps: CheckboxProps = {
 }
 
 describe(Checkbox, () => {
-  describe("when variant is set", () => {
-    it("adds variant class", () => {
-      const { getByPlaceholderText } = render(
-        <Checkbox {...defaultProps} variant="default" />
-      )
+  it("renders a checkbox", () => {
+    const { container } = render(<Checkbox {...defaultProps} />)
 
-      const checkbox = getByPlaceholderText(defaultProps.placeholder as string)
+    const checkbox = container.querySelector('input[type="checkbox"]')
 
-      expect(checkbox).toHaveClass("Checkbox--default")
-    })
+    expect(checkbox).toBeInTheDocument()
   })
 })
