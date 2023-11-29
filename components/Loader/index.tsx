@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import React from "react"
-import "./style.scss"
+import "./index.scss"
 
 export interface LoaderProps extends React.HTMLAttributes<HTMLDivElement> {
   text?: string
