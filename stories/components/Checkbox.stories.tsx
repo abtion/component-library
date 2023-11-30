@@ -7,6 +7,13 @@ import Checkbox, { CheckboxProps } from "~/components/Checkbox"
 export default {
   title: "Components/🚧 Checkbox",
   component: Checkbox,
+  parameters: {
+    sourceLinks: {
+      javascript: "index.tsx",
+      CSS: "index.scss",
+      test: "index.test.tsx",
+    },
+  },
 } as ComponentMeta<typeof Checkbox>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

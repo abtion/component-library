@@ -7,6 +7,13 @@ import Button, { ButtonProps } from "~/components/Button"
 export default {
   title: "Components/✅ Button",
   component: Button,
+  parameters: {
+    sourceLinks: {
+      javascript: "index.tsx",
+      CSS: "index.scss",
+      test: "index.test.tsx",
+    },
+  },
 } as ComponentMeta<typeof Button>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

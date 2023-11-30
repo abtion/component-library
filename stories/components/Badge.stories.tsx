@@ -7,6 +7,13 @@ import Badge, { BadgeProps } from "~/components/Badge"
 export default {
   title: "Components/✅ Badge",
   component: Badge,
+  parameters: {
+    sourceLinks: {
+      javascript: "index.tsx",
+      CSS: "index.scss",
+      test: "index.test.tsx",
+    },
+  },
 } as ComponentMeta<typeof Badge>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

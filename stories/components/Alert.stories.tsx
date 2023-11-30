@@ -12,6 +12,13 @@ import AlertIcon from "~/components/AlertIcon"
 export default {
   title: "Components/✅ Alert",
   component: Alert,
+  parameters: {
+    sourceLinks: {
+      javascript: "index.tsx",
+      CSS: "index.scss",
+      test: "index.test.tsx",
+    },
+  },
 } as ComponentMeta<typeof Alert>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
