@@ -5,12 +5,6 @@ import Duration from "~/components/Duration"
 export default {
   title: "Components/✅ Duration",
   component: Duration,
-  parameters: {
-    sourceLinks: {
-      javascript: "index.tsx",
-      test: "index.test.tsx",
-    },
-  },
 } as Meta<typeof Duration>
 
 type Story = StoryObj<typeof Duration>

@@ -13,11 +13,6 @@ export default {
     docs: {
       inlineStories: false,
     },
-    sourceLinks: {
-      javascript: "index.tsx",
-      CSS: "index.scss",
-      test: "index.test.tsx",
-    },
   },
 } as ComponentMeta<typeof ModalContent>
 

@@ -9,6 +9,7 @@ module.exports = {
     "@whitespace/storybook-addon-html",
     "@storybook/addon-a11y",
   ],
+  staticDirs: ["./static"],
   webpackFinal: (config) => {
     return {
       ...config,

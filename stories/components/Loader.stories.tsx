@@ -7,13 +7,6 @@ import Loader from "~/components/Loader"
 export default {
   title: "Components/🔎 Loader",
   component: Loader,
-  parameters: {
-    sourceLinks: {
-      javascript: "index.tsx",
-      CSS: "index.scss",
-      test: "index.test.tsx",
-    },
-  },
 } as ComponentMeta<typeof Loader>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

@@ -8,6 +8,7 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx,scss,css}",
     "./stories/**/*.tsx",
     "./public/index.ejs",
+    ".storybook/SourceLinks.jsx",
   ],
   theme: {
     container: {

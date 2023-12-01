@@ -7,13 +7,6 @@ import RadioButton, { RadioButtonProps } from "~/components/RadioButton"
 export default {
   title: "Components/🚧 RadioButton",
   component: RadioButton,
-  parameters: {
-    sourceLinks: {
-      javascript: "index.tsx",
-      CSS: "index.scss",
-      test: "index.test.tsx",
-    },
-  },
 } as ComponentMeta<typeof RadioButton>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

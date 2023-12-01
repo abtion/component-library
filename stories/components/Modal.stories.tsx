@@ -18,11 +18,6 @@ export default {
       inlineStories: false,
     },
     actions: { argTypesRegex: null },
-    sourceLinks: {
-      javascript: "index.tsx",
-      CSS: "index.scss",
-      test: "index.test.tsx",
-    },
   },
 } as ComponentMeta<typeof Modal>
 

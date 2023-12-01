@@ -7,13 +7,6 @@ import ButtonOutline, { ButtonOutlineProps } from "~/components/ButtonOutline"
 export default {
   title: "Components/🔎 ButtonOutline",
   component: ButtonOutline,
-  parameters: {
-    sourceLinks: {
-      javascript: "index.tsx",
-      CSS: "index.scss",
-      test: "index.test.tsx",
-    },
-  },
 } as ComponentMeta<typeof ButtonOutline>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

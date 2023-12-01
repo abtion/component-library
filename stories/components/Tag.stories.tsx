@@ -8,13 +8,6 @@ import { action } from "@storybook/addon-actions"
 export default {
   title: "Components/✅ Tag",
   component: Tag,
-  parameters: {
-    sourceLinks: {
-      javascript: "index.tsx",
-      CSS: "index.scss",
-      test: "index.test.tsx",
-    },
-  },
 } as ComponentMeta<typeof Tag>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
