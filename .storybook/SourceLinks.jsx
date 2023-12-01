@@ -15,14 +15,11 @@ export default function SourceLinks() {
 
   const {
     attachedCSFFile: {
-      meta: {
-        component,
-        parameters: { sourceLinks },
-      },
+      meta: { component },
     },
   } = useContext(DocsContext)
 
-  if (!component || !sourceLinks || !Object.keys(sourceLinks).length > 0) {
+  if (!component) {
     return null
   }
 
