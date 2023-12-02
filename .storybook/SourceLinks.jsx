@@ -4,7 +4,7 @@ import FolderArrowDownIcon from "@heroicons/react/20/solid/FolderArrowDownIcon"
 
 const componentFolders = {
   Rails: "app/javascript/components",
-  "Next.JS": "components",
+  "Next.js": "components",
 }
 
 export default function SourceLinks() {
