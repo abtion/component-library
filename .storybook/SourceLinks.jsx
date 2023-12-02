@@ -23,8 +23,9 @@ export default function SourceLinks() {
     return null
   }
 
-  const { name } = component
+  const { displayName: name } = component
   const gitSource = `https://github.com/abtion/component-library/blob/main/components/${name}`
+
   const zip =
     require(`!!file-loader?name=[folder].zip!./zip-folder-loader.js!~/components/${name}/index.tsx`).default
 
