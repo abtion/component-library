@@ -49,7 +49,7 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.0.10",
     "@types/testing-library__jest-dom": "^6.0.0",
-    "@types/webpack-env": "^1.18.0",
+    "@types/webpack-env": "^1.18.4",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "@whitespace/storybook-addon-html": "^5.1.6",
