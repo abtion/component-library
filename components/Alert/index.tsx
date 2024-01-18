@@ -1,11 +1,10 @@
 import React from "react"
 import classNames from "classnames"
-import { Variant } from "~/const/variant"
 import "./index.scss"
 import XMarkIcon from "@heroicons/react/20/solid/XMarkIcon"
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: Variant
+  variant?: "primary" | "neutral" | "success" | "danger" | "warning" | "info"
   onClose?: () => void
 }
 

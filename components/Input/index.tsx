@@ -1,6 +1,5 @@
 import React from "react"
 import classNames from "classnames"
-import { Size } from "~/const/size"
 import "./index.scss"
 
 const InputVariants = ["default", "error"] as const
@@ -8,7 +7,7 @@ export type InputVariant = (typeof InputVariants)[number]
 
 export interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
-  size?: Size
+  size?: "xs" | "sm" | "md" | "lg" | "xl"
   variant?: InputVariant
 }
 

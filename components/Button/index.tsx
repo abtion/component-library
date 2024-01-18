@@ -1,13 +1,19 @@
 import React from "react"
 import classNames from "classnames"
-import { Variant } from "~/const/variant"
-import { Size } from "~/const/size"
 import "./index.scss"
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: Size
-  variant?: Variant | "basic" | "secondary"
+  size?: "xs" | "sm" | "md" | "lg" | "xl"
+  variant?:
+    | "basic"
+    | "secondary"
+    | "primary"
+    | "neutral"
+    | "success"
+    | "danger"
+    | "warning"
+    | "info"
 }
 
 export default function Button(props: ButtonProps): JSX.Element {
