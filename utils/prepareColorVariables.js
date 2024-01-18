@@ -2,6 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-var-requires */
 const getContrastColor = require("./getContrastColor")
+const colorString = require("color-string")
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 // Prepare colors for usage in tailwind config and as css variables
@@ -22,8 +23,9 @@ module.exports = function prepareColorVariables(jsonColors) {
       let variableName = `--color-${colorName}`
       if (shade !== "DEFAULT") variableName += `-${shade}`
 
-      tailwindColor[shade] = `var(${variableName})`
-      cssVariables[variableName] = color
+      tailwindColor[shade] = `rgb(var(${variableName}) / <alpha-value>)`
+      const [colorR, colorG, colorB] = colorString.get.rgb(color)
+      cssVariables[variableName] = `${colorR} ${colorG} ${colorB}`
 
       // Find contrast colors only for colors with shades, and not for manually specified contrast colors
       const shadeIsContrastColor = /^(.+-|)contrast$/.test(shade)
@@ -44,9 +46,13 @@ module.exports = function prepareColorVariables(jsonColors) {
         contrastColor === jsonColors.dark ? "--color-dark" : "--color-light"
 
       if (shade === "DEFAULT") {
-        tailwindColor["contrast"] = `var(${contrastVariableName})`
+        tailwindColor[
+          "contrast"
+        ] = `rgb(var(${contrastVariableName}) / <alpha-value>)`
       } else {
-        tailwindColor[`${shade}-contrast`] = `var(${contrastVariableName})`
+        tailwindColor[
+          `${shade}-contrast`
+        ] = `rgb(var(${contrastVariableName}) / <alpha-value>)`
       }
     }
 
