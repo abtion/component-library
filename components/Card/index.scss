@@ -1,0 +1,36 @@
+.ProductCard {
+  @apply bg-light rounded-xl p-3;
+
+  &--dark {
+    @apply bg-dark;
+  }
+
+  &__title {
+    @apply mt-1;
+    @apply flex-none;
+    @apply font-normal;
+    @apply text-2xl;
+
+    &--dark {
+      @apply text-light;
+    }
+  }
+
+  &__description {
+    @apply pt-3;
+    @apply text-neutral-700;
+
+    &--dark {
+      @apply text-primary-600;
+    }
+  }
+
+  &__learnMore {
+    @apply underline whitespace-nowrap font-medium;
+    @apply text-neutral-700 hover:text-neutral-600;
+
+    &--dark {
+      @apply text-primary-600 hover:text-primary-500;
+    }
+  }
+}
