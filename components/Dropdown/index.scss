@@ -1,0 +1,71 @@
+.Dropdown {
+  @apply relative;
+  @apply cursor-pointer;
+  @apply w-auto;
+
+  &--lg {
+    min-width: 200px;
+  }
+
+  &__button {
+    @apply bg-neutral-50;
+    @apply w-full;
+    @apply h-full;
+    @apply pr-7 pl-1 py-1;
+    @apply border border-solid border-neutral-500 rounded-lg;
+    @apply relative;
+    @apply inline-flex;
+    @apply mx-auto;
+    @apply capitalize;
+
+    &-arrow {
+      @apply absolute top-2 right-1;
+
+      &--sm {
+        @apply top-1.5;
+      }
+    }
+
+    &-active {
+      @apply border-primary;
+    }
+
+    &--sm {
+      width: 70px;
+      height: 32px;
+      padding-top: 5px;
+      @apply pl-1 pb-1;
+      @apply text-sm;
+    }
+  }
+
+  &__options {
+    @apply absolute top-6 left-0 bg-neutral-50 capitalize;
+    @apply border border-solid border-neutral-500 rounded-lg shadow;
+    @apply p-1;
+    @apply capitalize;
+    @apply mx-auto;
+    @apply w-full;
+    max-height: calc(40px * 10 + 16px);
+    @apply overflow-y-scroll;
+    @apply z-50;
+
+    &--sm {
+      width: 70px;
+      @apply top-5;
+    }
+  }
+
+  &__option {
+    @apply hover:bg-primary-50;
+    @apply -mx-1 px-1 py-1;
+
+    &--sm {
+      @apply text-sm;
+    }
+  }
+
+  &__active {
+    @apply bg-light;
+  }
+}
