@@ -31,9 +31,9 @@
     }
 
     &--sm {
-      width: 70px;
       height: 32px;
       padding-top: 5px;
+      width: 70px;
       @apply pl-1 pb-1;
       @apply text-sm;
     }
