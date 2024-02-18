@@ -1,6 +1,6 @@
-import React, { ChangeEventHandler, useRef, useState } from "react"
+import React, { useState } from "react"
 
-import { format, isValid, parse } from "date-fns"
+import { format } from "date-fns"
 import { DayPicker, SelectSingleEventHandler } from "react-day-picker"
 import "./index.scss"
 
