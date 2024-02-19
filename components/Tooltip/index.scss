@@ -1,0 +1,27 @@
+.Tooltip {
+  @apply text-neutral-900 relative;
+
+  &__box {
+    @apply hidden;
+  }
+
+  &:hover &__box {
+    @apply flex flex-col absolute items-center -top-6 visible overflow-visible w-40 -left-3;
+
+    &--text {
+      @apply bg-primary-800 text-neutral-50 p-1 rounded-lg;
+    }
+
+    &--textYearly {
+      @apply w-80;
+    }
+
+    &--textProjected {
+      width: 350px;
+    }
+
+    &--textCommit {
+      @apply w-72;
+    }
+  }
+}
