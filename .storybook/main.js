@@ -43,7 +43,7 @@ module.exports = {
           },
           // Add sass support
           {
-            test: /\.s?css$/,
+            test: /\.scss$/,
             use: [
               "style-loader",
               "css-loader",
