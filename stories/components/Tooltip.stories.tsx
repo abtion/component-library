@@ -10,8 +10,18 @@ export default meta
 
 export const Default: StoryObj<typeof meta> = {
   args: {
-    children: <p>paragraph</p>,
-    hoverText: "hover text",
-    customStyle: "",
+    children: "tool",
+    tip: "To see the tip!",
+    className: "whitespace-nowrap",
   } as TooltipProps,
+  decorators: [
+    (Story) => (
+      <div className="mt-10">
+        Please hover the{" "}
+        <b>
+          <Story />
+        </b>
+      </div>
+    ),
+  ],
 }
