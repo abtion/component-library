@@ -5,7 +5,7 @@ import Input, { InputProps, InputVariant } from "~/components/Input"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Components/🚧 Input",
+  title: "Design System/Input 🚧",
   component: Input,
 } as ComponentMeta<typeof Input>
 

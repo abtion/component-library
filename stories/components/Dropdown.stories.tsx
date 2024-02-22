@@ -2,7 +2,7 @@ import { type Meta, type StoryObj } from "@storybook/react"
 import Dropdown, { DropdownProps, Sizes } from "~/components/Dropdown"
 
 const meta = {
-  title: "Components/🚧 Dropdown",
+  title: "Toolbox/Dropdown",
   component: Dropdown,
   argTypes: {
     onClickAction: { action: true },

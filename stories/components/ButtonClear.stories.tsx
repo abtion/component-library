@@ -5,7 +5,7 @@ import ButtonClear, { ButtonClearProps } from "~/components/ButtonClear"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Components/✅ ButtonClear",
+  title: "Design System/ButtonClear",
   component: ButtonClear,
 } as ComponentMeta<typeof ButtonClear>
 

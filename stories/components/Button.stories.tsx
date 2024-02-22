@@ -5,7 +5,7 @@ import Button, { ButtonProps } from "~/components/Button"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Components/✅ Button",
+  title: "Design System/Button",
   component: Button,
 } as ComponentMeta<typeof Button>
 

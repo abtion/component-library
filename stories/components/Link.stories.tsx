@@ -5,7 +5,7 @@ import Link, { LinkProps } from "~/components/Link"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Components/✅ Link",
+  title: "Design System/Link",
   component: Link,
 } as ComponentMeta<typeof Link>
 

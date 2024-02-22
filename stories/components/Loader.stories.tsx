@@ -5,7 +5,7 @@ import Loader from "~/components/Loader"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Components/🔎 Loader",
+  title: "Toolbox/Loader",
   component: Loader,
 } as ComponentMeta<typeof Loader>
 

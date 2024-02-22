@@ -10,7 +10,7 @@ import AlertIcon from "~/components/AlertIcon"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Components/✅ Alert",
+  title: "Design System/Alert",
   component: Alert,
 } as ComponentMeta<typeof Alert>
 

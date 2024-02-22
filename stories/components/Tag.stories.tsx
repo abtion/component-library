@@ -6,7 +6,7 @@ import { action } from "@storybook/addon-actions"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Components/✅ Tag",
+  title: "Design System/Tag",
   component: Tag,
 } as ComponentMeta<typeof Tag>
 

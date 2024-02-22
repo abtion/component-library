@@ -5,7 +5,7 @@ import Checkbox, { CheckboxProps } from "~/components/Checkbox"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Components/🚧 Checkbox",
+  title: "Design System/Checkbox 🚧",
   component: Checkbox,
 } as ComponentMeta<typeof Checkbox>
 

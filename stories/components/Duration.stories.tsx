@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import Duration from "~/components/Duration"
 
 export default {
-  title: "Components/✅ Duration",
+  title: "Toolbox/Duration",
   component: Duration,
 } as Meta<typeof Duration>
 

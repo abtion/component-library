@@ -5,7 +5,7 @@ import RadioButton, { RadioButtonProps } from "~/components/RadioButton"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Components/🚧 RadioButton",
+  title: "Design System/RadioButton 🚧",
   component: RadioButton,
 } as ComponentMeta<typeof RadioButton>
 

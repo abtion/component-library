@@ -3,7 +3,7 @@ import React from "react"
 import { Tooltip, TooltipProps } from "~/components/Tooltip"
 
 const meta = {
-  title: "Components/🚧 Tooltip",
+  title: "Toolbox/Tooltip",
   component: Tooltip,
 } satisfies Meta<typeof Tooltip>
 export default meta

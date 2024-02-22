@@ -5,7 +5,7 @@ import Badge, { BadgeProps } from "~/components/Badge"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Components/✅ Badge",
+  title: "Design System/Badge",
   component: Badge,
 } as ComponentMeta<typeof Badge>
 

@@ -6,6 +6,7 @@ import EnvelopeIcon from "@heroicons/react/20/solid/EnvelopeIcon"
 
 const meta = {
   component: Card,
+  title: "Toolbox/Card",
   decorators: [
     (Story) => (
       <BrowserRouter>
