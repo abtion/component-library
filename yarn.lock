@@ -9135,22 +9135,7 @@ jest-resolve-dependencies@^29.7.0:
     jest-regex-util "^29.6.3"
     jest-snapshot "^29.7.0"
 
-jest-resolve@^29.6.2:
-  version "29.6.2"
-  resolved "https://registry.yarnpkg.com/jest-resolve/-/jest-resolve-29.6.2.tgz#f18405fe4b50159b7b6d85e81f6a524d22afb838"
-  integrity sha512-G/iQUvZWI5e3SMFssc4ug4dH0aZiZpsDq9o1PtXTV1210Ztyb2+w+ZgQkB3iOiC5SmAEzJBOHWz6Hvrd+QnNPw==
-  dependencies:
-    chalk "^4.0.0"
-    graceful-fs "^4.2.9"
-    jest-haste-map "^29.6.2"
-    jest-pnp-resolver "^1.2.2"
-    jest-util "^29.6.2"
-    jest-validate "^29.6.2"
-    resolve "^1.20.0"
-    resolve.exports "^2.0.0"
-    slash "^3.0.0"
-
-jest-resolve@^29.7.0:
+jest-resolve@^29.6.2, jest-resolve@^29.7.0:
   version "29.7.0"
   resolved "https://registry.yarnpkg.com/jest-resolve/-/jest-resolve-29.7.0.tgz#64d6a8992dd26f635ab0c01e5eef4399c6bcbc30"
   integrity sha512-IOVhZSrg+UvVAshDSDtHyFCCBUl/Q3AAJv8iZ6ZjnZ74xzvwuzLXid9IIIPgTnY62SJjfuupMKZsZQRsCvxEgA==
