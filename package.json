@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/preset-typescript": "^7.15.0",
+    "@babel/preset-typescript": "^7.24.1",
     "@heroicons/react": "^2.0.13",
     "@svgr/webpack": "^6.3.1",
     "@tailwindcss/aspect-ratio": "^0.4.2",
