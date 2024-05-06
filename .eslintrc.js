@@ -13,6 +13,11 @@ module.exports = {
     "prettier",
     "plugin:storybook/recommended",
   ],
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
   parser: "@typescript-eslint/parser",
   rules: {
     // enable additional rules

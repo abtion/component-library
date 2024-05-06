@@ -42,14 +42,14 @@ You must have the following installed and available on your machine:
 
 ## First time setup
 
-`yarn install`
+`npm i`
 
 ## Day-to-day
 
-- Run the server: `yarn start` and [http://localhost:6006](http://localhost:6006)
-- Run tests: `yarn test`
-- Run frontend linters: `yarn lint`
-- Run tests with coverage: `yarn test --coverage`
+- Run the server: `npm start` and [http://localhost:6006](http://localhost:6006)
+- Run tests: `npm test`
+- Run frontend linters: `npm run lint`
+- Run tests with coverage: `npm test -- --coverage`
 
 ## Adding components
 
