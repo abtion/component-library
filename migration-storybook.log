@@ -1,0 +1,288 @@
+🔎 checking possible migrations..
+
+🔎 found a 'remove-argtypes-regex' migration:
+╭ Manual migration detected ────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                               │
+│   Attention: We've detected that you're using argTypesRegex:                                                  │
+│                                                                                                               │
+│   .storybook/preview.jsx                                                                                      │
+│     21 |                                                                                                      │
+│     22 | export const parameters = {                                                                          │
+│   > 23 |   actions: { argTypesRegex: "^on[A-Z].*" },                                                          │
+│        |              ^^^^^^^^^^^^^                                                                           │
+│     24 |   controls: {                                                                                        │
+│     25 |     matchers: {                                                                                      │
+│     26 |       color: /(background|color)$/i,                                                                 │
+│                                                                                                               │
+│   In Storybook you can write so-called play functions, which are used to render your stories interactively.   │
+│   Mocking action args in play functions was done implicitly by analyzing the argTypesRegex.                   │
+│                                                                                                               │
+│   Since Storybook 8, implicit action args mocking isn't supported anymore.                                    │
+│                                                                                                               │
+│   Use the following command to check for mocked action usages in your play functions:                         │
+│   npx storybook migrate find-implicit-spies --glob="**/*.stories.@(js|jsx|ts|tsx)"                            │
+│                                                                                                               │
+│   And follow the documentation to migrate your play functions:                                                │
+│   https://storybook.js.org/docs/8.0/essentials/actions#via-storybooktest-fn-spy-function                      │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+? Select continue once you have made the required changes, or quit to exit the migration process › quit / continue? Select continue once you have made the required changes, or quit to exit the migration process › quit / continue? Select continue once you have made the required changes, or quit to exit the migration process › quit / continue✔ Select continue once you have made the required changes, or quit to exit the migration process … quit / continue
+
+🔎 found a 'github-flavored-markdown-mdx' migration:
+╭ Automigration detected ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                   │
+│   In MDX1 you had the option of using GitHub flavored markdown.                                                                                   │
+│                                                                                                                                                   │
+│   Storybook >= 8.0 uses MDX3 for compiling MDX, and thus no longer supports GFM out of the box.                                                   │
+│   Because of this you need to explicitly add the GFM plugin in the addon-docs options:                                                            │
+│   https://storybook.js.org/docs/react/writing-docs/mdx#lack-of-github-flavored-markdown-gfm                                                       │
+│                                                                                                                                                   │
+│   We recommend that you follow the guide in the link above; however, we can add a temporary Storybook addon to help make this migration easier.   │
+│   We'll install the addon and add it to your storybook config.                                                                                    │
+│                                                                                                                                                   │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'github-flavored-markdown-mdx' migration on your project? › (Y/n)✔ Do you want to run the 'github-flavored-markdown-mdx' migration on your project? … yes
+
+An error occurred while installing dependencies:
+NPM error ERESOLVE - Dependency resolution error.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+❌ error when running github-flavored-markdown-mdx migration
+HandledError: Error: NPM error ERESOLVE - Dependency resolution error.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+    at NPMProxy.addDependencies (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-common/dist/index.js:33:75)
+    at async Object.run (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:227:231)
+    ... 4 lines matching cause stack trace ...
+    at async upgrade (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:618:2097) {
+  handled: true,
+  cause: Error: NPM error ERESOLVE - Dependency resolution error.
+  
+  Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+      at NPMProxy.runAddDeps (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-common/dist/index.js:35:5643)
+      at async NPMProxy.addDependencies (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-common/dist/index.js:32:927)
+      at async Object.run (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:227:231)
+      at async runFixes (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:604:1794)
+      at async automigrate (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:602:1629)
+      at async doUpgrade (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:618:1628)
+      at async withTelemetry (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-server/dist/index.js:28:3579)
+      at async upgrade (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:618:2097)
+}
+
+
+🔎 found a 'mdx-to-csf' migration:
+╭ Automigration detected ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                           │
+│   We've detected your project has one or more globs in your 'stories' config that matches .stories.mdx files:                                             │
+│   "../stories/Introduction.stories.mdx"                                                                                                                   │
+│   "../stories/**/*stories*"                                                                                                                               │
+│                                                                                                                                                           │
+│   In Storybook 7, we have deprecated defining stories in MDX files, and consequently have changed the suffix to simply .mdx. Since Storybook 8, we have   │
+│   removed the support of story definition in MDX files entirely. Therefore '.stories.mdx' files aren't supported anymore.                                 │
+│                                                                                                                                                           │
+│   Now, since Storybook 8.0, we have removed support for .stories.mdx files.                                                                               │
+│                                                                                                                                                           │
+│   We can automatically migrate your 'stories' config to include any .mdx file instead of just .stories.mdx.                                               │
+│   That would result in the following 'stories' config:                                                                                                    │
+│   "../stories/Introduction.mdx"                                                                                                                           │
+│   "../stories/**/*stories*"                                                                                                                               │
+│                                                                                                                                                           │
+│   Additionally, we will run the 'mdx-to-csf' codemod for you, which tries to transform '*.stories.mdx' files to '*.stories.js' and '*.mdx' files.         │
+│                                                                                                                                                           │
+│   To learn more about this change, see: https://storybook.js.org/docs/migration-guide#storiesmdx-to-mdxcsf                                                │
+│                                                                                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'mdx-to-csf' migration on your project? › (Y/n)✔ Do you want to run the 'mdx-to-csf' migration on your project? … no
+
+🔎 found a 'webpack5-compiler-setup' migration:
+╭ Automigration detected ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                           │
+│   Storybook's Webpack5 builder is now compiler agnostic, meaning you can choose a compiler addon that best fits your project:                             │
+│                                                                                                                                                           │
+│   - Babel: A vast ecosystem and is battle-tested. It's a robust choice if you have an extensive Babel setup or need specific Babel plugins for your       │
+│   project.                                                                                                                                                │
+│   - SWC:  Fast and easy to configure. Ideal if you want faster builds and have a straightforward configuration without the need for Babel's               │
+│   extensibility.                                                                                                                                          │
+│                                                                                                                                                           │
+│   In the next step, Storybook will ask you to choose a compiler to automatically set it up for you.                                                       │
+│                                                                                                                                                           │
+│   After the migration, you can switch Webpack5 compilers by swapping the addon in your project.                                                           │
+│   You can find more information here: https://storybook.js.org/docs/8.0/builders/webpack#compiler-support                                                 │
+│                                                                                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'webpack5-compiler-setup' migration on your project? › (Y/n)✔ Do you want to run the 'webpack5-compiler-setup' migration on your project? … yes
+? Which compiler would you like to use? › - Use arrow-keys. Return to submit.
+❯   Babel - Choose Babel for a vast ecosystem and battle-tested reliability.
+    SWC
+? Which compiler would you like to use? › - Use arrow-keys. Return to submit.
+    Babel
+❯   SWC - Choose SWC for fast builds and simple configuration.
+? Which compiler would you like to use? › - Use arrow-keys. Return to submit.
+❯   Babel - Choose Babel for a vast ecosystem and battle-tested reliability.
+    SWC
+? Which compiler would you like to use? › - Use arrow-keys. Return to submit.
+    Babel
+❯   SWC - Choose SWC for fast builds and simple configuration.
+? Which compiler would you like to use? › - Use arrow-keys. Return to submit.
+❯   Babel - Choose Babel for a vast ecosystem and battle-tested reliability.
+    SWC
+✔ Which compiler would you like to use? › Babel
+Verifying @storybook/addon-webpack5-compiler-babel
+Installing @storybook/addon-webpack5-compiler-babel@^3.0.3
+
+An error occurred while installing dependencies:
+NPM error ERESOLVE - Dependency resolution error.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+❌ error when running webpack5-compiler-setup migration
+HandledError: Error: NPM error ERESOLVE - Dependency resolution error.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+    at NPMProxy.addDependencies (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-common/dist/index.js:33:75)
+    at async add (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:185:722)
+    ... 5 lines matching cause stack trace ...
+    at async upgrade (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:618:2097) {
+  handled: true,
+  cause: Error: NPM error ERESOLVE - Dependency resolution error.
+  
+  Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+      at NPMProxy.runAddDeps (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-common/dist/index.js:35:5643)
+      at async NPMProxy.addDependencies (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-common/dist/index.js:32:927)
+      at async add (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:185:722)
+      at async Object.run (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:499:485)
+      at async runFixes (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:604:1794)
+      at async automigrate (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:602:1629)
+      at async doUpgrade (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:618:1628)
+      at async withTelemetry (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-server/dist/index.js:28:3579)
+      at async upgrade (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:618:2097)
+}
+
+
+🔎 found a 'mdx1to3' migration:
+╭ Automigration detected ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                           │
+│   We've found 1 '.stories.mdx' files in your project.                                                                                                     │
+│                                                                                                                                                           │
+│   Storybook has upgraded to MDX3 (https://mdxjs.com/blog/v3/). MDX3 itself doesn't contain disruptive breaking changes, whereas the transition from       │
+│   MDX1 to MDX2 was a significant change.                                                                                                                  │
+│   We can try to automatically upgrade your MDX files to MDX3 format using some common patterns.                                                           │
+│                                                                                                                                                           │
+│   After this install completes, and before you start Storybook, we strongly recommend reading the MDX2 section                                            │
+│   of the 7.0 migration guide. It contains useful tools for detecting and fixing any remaining issues.                                                     │
+│                                                                                                                                                           │
+│   https://storybook.js.org/migration-guides/7.0                                                                                                           │
+│                                                                                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'mdx1to3' migration on your project? › (Y/n)✔ Do you want to run the 'mdx1to3' migration on your project? … yes
+🆗 Unmodified Introduction.stories.mdx
+✅ ran mdx1to3 migration
+
+🔎 found a 'upgradeStorybookRelatedDependencies' migration:
+╭ Automigration detected ────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                        │
+│   You're upgrading to the latest version of Storybook. We recommend upgrading the following packages:                                  │
+│   - @whitespace/storybook-addon-html: 5.1.6 => 6.0.5                                                                                   │
+│                                                                                                                                        │
+│   After upgrading, we will run the dedupe command, which could possibly have effects on dependencies that are not Storybook related.   │
+│   see: https://docs.npmjs.com/cli/commands/npm-dedupe                                                                                  │
+│                                                                                                                                        │
+│   Do you want to proceed (upgrade the detected packages)?                                                                              │
+│                                                                                                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'upgradeStorybookRelatedDependencies' migration on your project? › (y/N)✔ Do you want to run the 'upgradeStorybookRelatedDependencies' migration on your project? … yes
+Installing dependencies...
+
+An error occurred while installing dependencies.
+❌ error when running upgradeStorybookRelatedDependencies migration
+HandledError: Error: Command failed with exit code 1: npm install
+    at NPMProxy.installDependencies (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-common/dist/index.js:28:4695)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.run (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:556:541)
+    ... 2 lines matching cause stack trace ...
+    at async doUpgrade (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:618:1628)
+    at async withTelemetry (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-server/dist/index.js:28:3579)
+    at async upgrade (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:618:2097) {
+  handled: true,
+  cause: Error: Command failed with exit code 1: npm install
+      at makeError (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/execa/lib/error.js:60:11)
+      at handlePromise (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/execa/index.js:118:26)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async NPMProxy.executeCommand (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-common/dist/index.js:35:1755)
+      at async NPMProxy.runInstall (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-common/dist/index.js:35:5071)
+      at async NPMProxy.installDependencies (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/core-common/dist/index.js:28:4590)
+      at async Object.run (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:556:541)
+      at async runFixes (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:604:1794)
+      at async automigrate (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:602:1629)
+      at async doUpgrade (/home/jespers/.npm/_npx/bc7e1e37fcb46ffc/node_modules/@storybook/cli/dist/generate.js:618:1628) {
+    shortMessage: 'Command failed with exit code 1: npm install',
+    command: 'npm install',
+    escapedCommand: 'npm install',
+    exitCode: 1,
+    signal: undefined,
+    signalDescription: undefined,
+    stdout: undefined,
+    stderr: undefined,
+    failed: true,
+    timedOut: false,
+    isCanceled: false,
+    killed: false
+  }
+}
+
+
+🔎 found a 'visual-tests-addon' migration:
+╭ Automigration detected ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                          │
+│   New to Storybook 8: Storybook's Visual Tests addon helps you catch unintentional changes/bugs in your stories. The addon is powered by Chromatic, a    │
+│   cloud-based testing tool developed by Storybook's core team.                                                                                           │
+│                                                                                                                                                          │
+│   Learn more: storybook.js.org/docs/writing-tests/visual-testing                                                                                         │
+│                                                                                                                                                          │
+│   Install Visual Tests addon in your project?                                                                                                            │
+│                                                                                                                                                          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'visual-tests-addon' migration on your project? › (Y/n)✔ Do you want to run the 'visual-tests-addon' migration on your project? … no
+WARN An issue occurred while trying to find dependencies metadata using npm.
+
+╭ Migration check ran with failures ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                           │
+│   Successful migrations:                                                                                                                                  │
+│                                                                                                                                                           │
+│   mdx1to3                                                                                                                                                 │
+│                                                                                                                                                           │
+│   Failed migrations:                                                                                                                                      │
+│                                                                                                                                                           │
+│   github-flavored-markdown-mdx:                                                                                                                           │
+│   Error: NPM error ERESOLVE - Dependency resolution error.                                                                                                │
+│                                                                                                                                                           │
+│   Please check the logfile generated at ./storybook.log for troubleshooting and try again.                                                                │
+│   webpack5-compiler-setup:                                                                                                                                │
+│   Error: NPM error ERESOLVE - Dependency resolution error.                                                                                                │
+│                                                                                                                                                           │
+│   Please check the logfile generated at ./storybook.log for troubleshooting and try again.                                                                │
+│   upgradeStorybookRelatedDependencies:                                                                                                                    │
+│   Error: Command failed with exit code 1: npm install                                                                                                     │
+│                                                                                                                                                           │
+│   You can find the full logs in /home/jespers/design-system/migration-storybook.log                                                                       │
+│                                                                                                                                                           │
+│   Manual migrations:                                                                                                                                      │
+│                                                                                                                                                           │
+│   remove-argtypes-regex                                                                                                                                   │
+│                                                                                                                                                           │
+│   Skipped migrations:                                                                                                                                     │
+│                                                                                                                                                           │
+│   mdx-to-csf, visual-tests-addon                                                                                                                          │
+│                                                                                                                                                           │
+│   ─────────────────────────────────────────────────                                                                                                       │
+│                                                                                                                                                           │
+│   If you'd like to run the migrations again, you can do so by running 'npx storybook automigrate'                                                         │
+│                                                                                                                                                           │
+│   The automigrations try to migrate common patterns in your project, but might not contain everything needed to migrate to the latest version of          │
+│   Storybook.                                                                                                                                              │
+│                                                                                                                                                           │
+│   Please check the changelog and migration guide for manual migrations and more information: https://storybook.js.org/docs/8.0/migration-guide            │
+│   And reach out on Discord if you need help: https://discord.gg/storybook                                                                                 │
+│                                                                                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+

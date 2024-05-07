@@ -2,7 +2,7 @@ const path = require("path")
 const { cascadeLayerPrefixer } = require("../utils/cascadeLayerPrefixer")
 
 module.exports = {
-  stories: ["../stories/Introduction.stories.mdx", "../stories/**/*stories*"],
+  stories: ["../stories/Introduction.mdx", "../stories/**/*.mdx"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",

@@ -1,0 +1,40 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: @whitespace/storybook-addon-html@5.1.6
+npm ERR! Found: @storybook/theming@8.0.10
+npm ERR! node_modules/@storybook/theming
+npm ERR!   @storybook/theming@"8.0.10" from @storybook/addon-docs@8.0.10
+npm ERR!   node_modules/@storybook/addon-docs
+npm ERR!     @storybook/addon-docs@"8.0.10" from @storybook/addon-essentials@8.0.10
+npm ERR!     node_modules/@storybook/addon-essentials
+npm ERR!       dev @storybook/addon-essentials@"^8.0.10" from the root project
+npm ERR!   @storybook/theming@"8.0.10" from @storybook/components@8.0.10
+npm ERR!   node_modules/@storybook/addon-docs/node_modules/@storybook/components
+npm ERR!     @storybook/components@"8.0.10" from @storybook/addon-docs@8.0.10
+npm ERR!     node_modules/@storybook/addon-docs
+npm ERR!       @storybook/addon-docs@"8.0.10" from @storybook/addon-essentials@8.0.10
+npm ERR!       node_modules/@storybook/addon-essentials
+npm ERR!         dev @storybook/addon-essentials@"^8.0.10" from the root project
+npm ERR!   4 more (@storybook/blocks, @storybook/components, ...)
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer @storybook/theming@"^6.5.8 || ^7.0.12" from @whitespace/storybook-addon-html@5.1.6
+npm ERR! node_modules/@whitespace/storybook-addon-html
+npm ERR!   dev @whitespace/storybook-addon-html@"^5.1.6" from the root project
+npm ERR! 
+npm ERR! Conflicting peer dependency: @storybook/theming@7.6.19
+npm ERR! node_modules/@storybook/theming
+npm ERR!   peer @storybook/theming@"^6.5.8 || ^7.0.12" from @whitespace/storybook-addon-html@5.1.6
+npm ERR!   node_modules/@whitespace/storybook-addon-html
+npm ERR!     dev @whitespace/storybook-addon-html@"^5.1.6" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! 
+npm ERR! For a full report see:
+npm ERR! /home/jespers/.npm/_logs/2024-05-07T06_56_54_577Z-eresolve-report.txt
+
+npm ERR! A complete log of this run can be found in: /home/jespers/.npm/_logs/2024-05-07T06_56_54_577Z-debug-0.log
