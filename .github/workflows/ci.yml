@@ -14,11 +14,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
-      - name: yarn
-        run: yarn --frozen-lockfile
+          cache: "npm"
+      - name: npm
+        run: npm ci
       - name: stylelint
-        run: yarn lint-style
+        run: npm run lint-style
 
   eslint:
     runs-on: ubuntu-latest
@@ -28,11 +28,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
-      - name: yarn
-        run: yarn --frozen-lockfile
+          cache: "npm"
+      - name: npm
+        run: npm ci
       - name: lint
-        run: yarn lint-eslint
+        run: npm run lint-eslint
 
   prettier:
     runs-on: ubuntu-latest
@@ -42,11 +42,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
-      - name: yarn
-        run: yarn --frozen-lockfile
+          cache: "npm"
+      - name: npm
+        run: npm ci
       - name: prettier
-        run: yarn lint-prettier
+        run: npm run lint-prettier
 
   jest:
     runs-on: ubuntu-latest
@@ -56,11 +56,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
-      - name: yarn
-        run: yarn --frozen-lockfile
+          cache: "npm"
+      - name: npm
+        run: npm ci
       - name: test
-        run: yarn test --coverage
+        run: npm test -- --coverage
 
   build:
     runs-on: ubuntu-latest
@@ -71,11 +71,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
-      - name: yarn
-        run: yarn --frozen-lockfile
+          cache: "npm"
+      - name: npm
+        run: npm ci
       - name: build
-        run: yarn build
+        run: npm run build
 
   deploy:
     runs-on: ubuntu-latest
@@ -91,11 +91,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
-      - name: yarn
-        run: yarn --frozen-lockfile
+          cache: "npm"
+      - name: npm
+        run: npm ci
       - name: Build Storybook
-        run: yarn build
+        run: npm run build
       - name: Deploy Storybook
         uses: peaceiris/actions-gh-pages@v4
         with:
