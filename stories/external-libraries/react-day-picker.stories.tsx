@@ -6,7 +6,7 @@ import { format } from "date-fns"
 import "react-day-picker/dist/style.css"
 
 export default {
-  title: "External/react-day-picker",
+  title: "External Libraries/react-day-picker",
 }
 
 export const Default = (): JSX.Element => {
