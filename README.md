@@ -68,6 +68,6 @@ To contribute get the project running locally and add your component (see [devel
 
 When your component is ready:
 
-1. Run linters and ensure coverage is still 100%: `yarn lint`, `yarn test --coverage`
+1. Run linters and ensure coverage is still 100%: `npm run lint`, `npm test -- --coverage`
 2. Push to main
 3. The component will show up on muffibook.abtion.com after a couple of minutes.
