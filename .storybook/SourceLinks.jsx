@@ -5,6 +5,7 @@ import FolderArrowDownIcon from "@heroicons/react/20/solid/FolderArrowDownIcon"
 const componentFolders = {
   Rails: "app/javascript/components",
   "Next.js": "components",
+  "AdonisJS": "inertia/components",
 }
 
 export default function SourceLinks() {
