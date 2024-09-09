@@ -5,7 +5,7 @@
   "dependencies": {
     "@babel/preset-typescript": "^7.24.1",
     "@heroicons/react": "^2.0.13",
-    "@svgr/webpack": "^6.3.1",
+    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "autoprefixer": "^10.4.17",
     "babel-eslint": "^10.1.0",
