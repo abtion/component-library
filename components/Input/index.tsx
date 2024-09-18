@@ -2,13 +2,10 @@ import React from "react"
 import classNames from "classnames"
 import "./index.scss"
 
-const InputVariants = ["default", "error"] as const
-export type InputVariant = (typeof InputVariants)[number]
-
 export interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
-  size?: "xs" | "sm" | "md" | "lg" | "xl"
-  variant?: InputVariant
+  size?: Size
+  variant?: "default" | "error"
 }
 
 export default function Input(props: InputProps): JSX.Element {
