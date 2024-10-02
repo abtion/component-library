@@ -7,6 +7,7 @@
     "@heroicons/react": "^2.0.13",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@uidotdev/usehooks": "^2.4.1",
     "autoprefixer": "^10.4.17",
     "babel-eslint": "^10.1.0",
     "classnames": "^2.3.2",

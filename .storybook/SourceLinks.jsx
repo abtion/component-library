@@ -1,6 +1,7 @@
 import { useContext, useRef, useState } from "react"
 import { DocsContext } from "@storybook/blocks"
 import FolderArrowDownIcon from "@heroicons/react/20/solid/FolderArrowDownIcon"
+import { useLocalStorage } from "@uidotdev/usehooks"
 
 const componentFolders = {
   Rails: "app/javascript/components",
@@ -9,7 +10,10 @@ const componentFolders = {
 }
 
 export default function SourceLinks() {
-  const [framework, setFramework] = useState("Rails")
+  const [framework, setFramework] = useLocalStorage(
+    "selected-framework",
+    "Rails"
+  )
   const [copied, setCopied] = useState(false)
   const componentFolder = componentFolders[framework]
   const copiedTimeoutRef = useRef(null)
