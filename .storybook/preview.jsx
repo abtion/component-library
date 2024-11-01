@@ -7,13 +7,16 @@ import {
   Stories,
 } from "@storybook/blocks"
 
-import prepareColorVariables from "../utils/prepareColorVariables"
+import {
+  addContrastColors,
+  getColorVariables,
+} from "@abtion-oss/design-system-colors"
 import colors from "../colors.json"
 import MuffibookTheme from "./MuffibookTheme"
 import SourceLinks from "./SourceLinks"
 
 const cssRoot = document.querySelector(":root")
-const cssVariables = prepareColorVariables(colors).cssVariables
+const cssVariables = getColorVariables(addContrastColors(colors))
 
 Object.entries(cssVariables).forEach(([name, value]) =>
   cssRoot.style.setProperty(name, value)

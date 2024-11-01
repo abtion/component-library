@@ -1,7 +1,5 @@
+const { getTailwindColors } = require("@abtion-oss/design-system-colors")
 const colors = require("./colors.json")
-const prepareColorVariables = require("./utils/prepareColorVariables")
-
-const tailwindConfig = prepareColorVariables(colors).tailwindConfig
 
 module.exports = {
   content: [
@@ -20,7 +18,7 @@ module.exports = {
       white: "white",
       black: "black",
       current: "currentColor",
-      ...tailwindConfig,
+      ...getTailwindColors(colors),
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
