@@ -1,7 +1,8 @@
 import React from "react"
-import { render } from "@testing-library/react"
+import { render, waitFor } from "@testing-library/react"
 
 import Button, { ButtonProps } from "."
+import userEvent from "@testing-library/user-event"
 
 const defaultProps: ButtonProps = {
   children: "Button text",
@@ -22,7 +23,7 @@ describe(Button, () => {
 
       const button = getByText(defaultProps.children as string)
 
-      expect(button).toHaveClass("Button--md")
+      expect(button.parentElement).toHaveClass("Button--md")
     })
   })
 
@@ -34,7 +35,31 @@ describe(Button, () => {
 
       const button = getByText(defaultProps.children as string)
 
-      expect(button).toHaveClass("Button--primary")
+      expect(button.parentElement).toHaveClass("Button--primary")
+    })
+  })
+
+  describe("when user clicks", () => {
+    it("shows a loader", async () => {
+      const { getByText } = render(
+        <Button
+          {...defaultProps}
+          onClick={() => new Promise((resolve) => setTimeout(resolve, 200))}
+        />
+      )
+      await userEvent.click(getByText(defaultProps.children as string))
+      await waitFor(() => expect(getByText("Loading...")).toBeInTheDocument())
+    })
+
+    it("prevents calling onClick twice", async () => {
+      const onClickFunc = jest.fn(
+        () => new Promise((resolve) => setTimeout(resolve, 200))
+      )
+      const { getByText } = render(
+        <Button {...defaultProps} onClick={onClickFunc} />
+      )
+      await userEvent.dblClick(getByText(defaultProps.children as string))
+      expect(onClickFunc).toHaveBeenCalledTimes(1)
     })
   })
 })
