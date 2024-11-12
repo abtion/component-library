@@ -35,7 +35,7 @@ export default function Button(props: ButtonProps): JSX.Element {
     {
       [`Button--${size}`]: size,
       [`Button--${variant}`]: variant,
-      [`Button--isLoading`]: isLoading,
+      [`cursor-progress`]: isLoading,
     },
     className
   )

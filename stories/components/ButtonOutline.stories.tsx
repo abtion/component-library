@@ -1,16 +1,15 @@
 import React from "react"
-import { ComponentStory, ComponentMeta } from "@storybook/react"
-
+import { StoryFn, Meta } from "@storybook/react"
 import ButtonOutline, { ButtonOutlineProps } from "~/components/ButtonOutline"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Toolbox/ButtonOutline",
+  title: "Design System/ButtonOutline",
   component: ButtonOutline,
-} as ComponentMeta<typeof ButtonOutline>
+} as Meta<typeof ButtonOutline>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof ButtonOutline> = (args) => (
+const Template: StoryFn<typeof ButtonOutline> = (args) => (
   <ButtonOutline {...args} />
 )
 
@@ -18,6 +17,10 @@ const sharedProps: Partial<ButtonOutlineProps> = {
   children: "Button text",
   size: "md",
   disabled: false,
+  onClick: async () => {
+    await new Promise((resolve) => setTimeout(resolve, 500))
+    console.log("onClick work finished")
+  },
 }
 
 // More on args: https://storybook.js.org/docs/react/writing-stories/args

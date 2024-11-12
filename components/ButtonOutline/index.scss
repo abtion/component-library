@@ -1,5 +1,5 @@
 .ButtonOutline {
-  @apply border border-solid bg-transparent font-medium leading-4 shadow-sm;
+  @apply relative border border-solid bg-transparent font-medium leading-4 shadow-sm;
 
   // Round if no rounding class is specified
   &:not([class*="rounded"]) {

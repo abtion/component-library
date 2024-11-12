@@ -1,10 +1,6 @@
 .Button {
   @apply relative border border-transparent font-medium leading-4 shadow-sm;
 
-  &--isLoading {
-    @apply cursor-progress;
-  }
-
   // Round if no rounding class is specified
   &:not([class*="rounded"]) {
     @apply rounded-md;

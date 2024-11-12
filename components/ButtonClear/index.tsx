@@ -1,4 +1,4 @@
-import React from "react"
+import React, { MouseEventHandler, useState } from "react"
 import classNames from "classnames"
 import "./index.scss"
 
@@ -17,16 +17,43 @@ export interface ButtonClearProps
 }
 
 export default function ButtonClear(props: ButtonClearProps): JSX.Element {
-  const { size, variant, className, ...rest } = props
+  const { size, variant, className, onClick, children, ...rest } = props
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleClick: MouseEventHandler<HTMLButtonElement> = async (e) => {
+    if (isLoading) return
+    setIsLoading(true)
+    try {
+      await Promise.resolve(onClick?.(e))
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
   const usedClassName = classNames(
     "ButtonClear",
     {
       [`ButtonClear--${size}`]: size,
       [`ButtonClear--${variant}`]: variant,
+      [`cursor-progress`]: isLoading,
     },
     className
   )
 
-  return <button className={usedClassName} {...rest} />
+  return (
+    <button
+      className={usedClassName}
+      {...(onClick ? { onClick: handleClick } : {})}
+      {...rest}
+    >
+      <div className={isLoading ? "invisible" : "visible"}>{children}</div>
+      <div
+        className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${
+          isLoading ? "visible" : "invisible"
+        }`}
+      >
+        <p>Loading...</p>
+      </div>
+    </button>
+  )
 }
