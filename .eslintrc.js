@@ -24,8 +24,7 @@ module.exports = {
     "linebreak-style": ["error", "unix"],
     camelcase: ["error"],
 
-    // Don't allow console.log
-    "no-console": ["error"],
+    // Allow console.log
     "@typescript-eslint/no-unused-vars": [
       "error",
       { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },

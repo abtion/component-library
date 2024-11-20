@@ -1,16 +1,15 @@
 import React from "react"
-import { ComponentStory, ComponentMeta } from "@storybook/react"
-
+import { Meta, StoryFn } from "@storybook/react"
 import ButtonClear, { ButtonClearProps } from "~/components/ButtonClear"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: "Design System/ButtonClear",
   component: ButtonClear,
-} as ComponentMeta<typeof ButtonClear>
+} as Meta<typeof ButtonClear>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof ButtonClear> = (args) => (
+const Template: StoryFn<typeof ButtonClear> = (args) => (
   <ButtonClear {...args} />
 )
 
@@ -18,6 +17,10 @@ const sharedProps: Partial<ButtonClearProps> = {
   children: "Button text",
   size: "md",
   disabled: false,
+  onClick: async () => {
+    await new Promise((resolve) => setTimeout(resolve, 500))
+    console.log("onClick work finished")
+  },
 }
 
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
