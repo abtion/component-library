@@ -6,7 +6,11 @@ import userEvent from "@testing-library/user-event"
 describe(FileInput, () => {
   it("renders an invisible file input", () => {
     const { container } = render(
-      <FileInput onChangeHandler={jest.fn()} inputId="id" element={<div />} />
+      <FileInput
+        onChangeHandler={jest.fn()}
+        element={<div />}
+        allowedFileTypes={["image/png"]}
+      />
     )
     const fileInput = container.querySelector('input[type="file"]')
     expect(fileInput).toBeInTheDocument()
@@ -18,8 +22,8 @@ describe(FileInput, () => {
       const { container } = render(
         <FileInput
           onChangeHandler={onChangeHandler}
-          inputId="id"
           element={<div />}
+          allowedFileTypes={["image/png"]}
         />
       )
       const button = container.getElementsByTagName("input")[0]
@@ -41,8 +45,8 @@ describe(FileInput, () => {
       const { container } = render(
         <FileInput
           onChangeHandler={onChangeHandler}
-          inputId="id"
           element={<div />}
+          allowedFileTypes={["image/png"]}
         />
       )
       const files = [

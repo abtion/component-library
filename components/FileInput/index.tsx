@@ -4,13 +4,26 @@ import classNames from "classnames"
 export interface FileInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   onChangeHandler: (files: File[]) => void
-  inputId: string
   element: ReactElement
+  allowedFileTypes: string[]
 }
 
 export default function FileInput(props: FileInputProps): JSX.Element {
-  const { onChangeHandler, inputId, element, className, ...restInputProps } =
-    props
+  const {
+    onChangeHandler,
+    element,
+    allowedFileTypes = [
+      "audio/*",
+      "video/*",
+      "image/*",
+      ".docx",
+      ".doc",
+      ".zip",
+      ".rar",
+    ],
+    className,
+    ...restInputProps
+  } = props
 
   const usedClassName = classNames("Button", className)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -30,8 +43,7 @@ export default function FileInput(props: FileInputProps): JSX.Element {
         name="file"
         onChange={changeHandler}
         className={usedClassName}
-        id={inputId}
-        accept="audio/*,video/*,image/*,.csv,.pdf,.xlsx,.xsl, .docx, .doc, .zip, .rar"
+        accept={allowedFileTypes.join(",")}
         multiple
         data-testid="file-upload-id"
         {...restInputProps}

@@ -12,7 +12,6 @@ export default meta
 export const Default: StoryObj<typeof meta> = {
   args: {
     className: "hidden",
-    inputId: "file-upload",
     element: (
       <Button variant="primary" size="md" onClick={() => console.log("click")}>
         Add Attachments
