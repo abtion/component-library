@@ -24,7 +24,7 @@ export const DateRangePill = (props: {
 
   return (
     <div
-      className={`bg-neutral-800 w-fit rounded-full my-1 ${
+      className={`bg-neutral-800 w-2/5 rounded-full my-1 text-center ${
         isSelected
           ? "text-primary font-bold bg-primary-100 lg:bg-primary-100"
           : disabled
