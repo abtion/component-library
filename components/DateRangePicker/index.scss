@@ -1,0 +1,43 @@
+.rdp {
+  --rdp-cell-size: 45px !important;
+
+  --rdp-accent-color: rgb(var(--color-primary-800) / var(--tw-text-opacity)) !important;
+
+  --rdp-background-color: rgb(var(--color-primary) / var(--tw-text-opacity)) !important;
+  margin: 0 !important;
+
+  .rdp-months {
+    @apply flex;
+
+    .rdp-month:first-child,
+    .rdp-month:last-child {
+      @apply mx-auto;
+    }
+
+    .rdp-dropdown:focus-visible:not([disabled]) option {
+      @apply bg-dark;
+    }
+  }
+
+  .rdp-table {
+    .rdp-day_range_end.rdp-day_range_start {
+      @apply bg-primary rounded-full;
+    }
+
+    .rdp-day_range_start {
+      @apply bg-primary rounded-r;
+    }
+
+    .rdp-day_range_end {
+      @apply bg-primary rounded-l;
+    }
+
+    .rdp-cell:not(:last-child) .rdp-day_range_start::after {
+      box-shadow: 1rem 0 0 0.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    --rdp-cell-size: 40px !important;
+  }
+}
