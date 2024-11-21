@@ -12,19 +12,10 @@ import "react-day-picker/dist/style.css"
 
 import { DateRangePill } from "./DateRangePill"
 
-const datesEqual = (date1?: Date, date2?: Date) =>
-  date1 !== undefined &&
-  date2 !== undefined &&
-  date1.getFullYear() === date2.getFullYear() &&
-  date1.getMonth() === date2.getMonth() &&
-  date1.getDate() === date2.getDate()
-
 const dateToStr = (date: Date) =>
   `${date.getFullYear()}-${(date.getMonth() + 1)
     .toString()
     .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`
-
-const today = new Date()
 
 const DateRangePicker = (props: { onClose: () => void }) => {
   const [range, setRange] = useState<DateRange | undefined>(undefined)
@@ -59,29 +50,9 @@ const DateRangePicker = (props: { onClose: () => void }) => {
     setPickStartDate((prev) => !prev)
   }
 
-  const year = today.getFullYear()
-  const month = today.getMonth()
-  const thisMonthFirstDay = new Date(year, month, 1)
-  const thisMonthLastDay = new Date(year, month + 1, 0)
-  const lastMonthFirstDay = new Date(year, month - 1, 1)
-  const lastMonthLastDay = new Date(year, month, 0)
-  const threeMonthsFirstDay = new Date(year, month - 3, 1)
-  const sixMonthsFirstDay = new Date(year, month - 6, 1)
-  const firstDayYear = new Date(year, 0, 1)
-
-  const thisMonthSelected =
-    datesEqual(range?.from, thisMonthFirstDay) &&
-    datesEqual(range?.to, thisMonthLastDay)
-  const previousMonthSelected =
-    datesEqual(range?.from, lastMonthFirstDay) &&
-    datesEqual(range?.to, lastMonthLastDay)
-  const last3MonthsSelected =
-    datesEqual(range?.from, threeMonthsFirstDay) &&
-    datesEqual(range?.to, lastMonthLastDay)
-  const this6MonthsSelected =
-    datesEqual(range?.from, sixMonthsFirstDay) && datesEqual(range?.to, today)
-  const thisYearSelected =
-    datesEqual(range?.from, firstDayYear) && datesEqual(range?.to, today)
+  const today = new Date()
+  const thisYear = today.getFullYear()
+  const thisMonth = today.getMonth()
 
   return (
     <div
@@ -102,34 +73,38 @@ const DateRangePicker = (props: { onClose: () => void }) => {
         <div className="flex w-full lg:max-w-72 flex-wrap gap-2 my-2">
           <DateRangePill
             text="This month"
-            isSelected={thisMonthSelected}
-            onClick={() =>
-              setRange({ from: thisMonthFirstDay, to: thisMonthLastDay })
-            }
+            startDate={new Date(thisYear, thisMonth, 1)}
+            endDate={new Date(thisYear, thisMonth + 1, 0)}
+            currentRange={{ from: range?.from, to: range?.to }}
+            onClick={setRange}
           />
           <DateRangePill
             text="Previous month"
-            isSelected={previousMonthSelected}
-            onClick={() =>
-              setRange({ from: lastMonthFirstDay, to: lastMonthLastDay })
-            }
+            startDate={new Date(thisYear, thisMonth - 1, 1)}
+            endDate={new Date(thisYear, thisMonth, 0)}
+            currentRange={{ from: range?.from, to: range?.to }}
+            onClick={setRange}
           />
           <DateRangePill
             text="Last 3 months"
-            isSelected={last3MonthsSelected}
-            onClick={() =>
-              setRange({ from: threeMonthsFirstDay, to: lastMonthLastDay })
-            }
+            startDate={new Date(thisYear, thisMonth - 3, 1)}
+            endDate={new Date(thisYear, thisMonth, 0)}
+            currentRange={{ from: range?.from, to: range?.to }}
+            onClick={setRange}
           />
           <DateRangePill
-            text="Current half year"
-            isSelected={this6MonthsSelected}
-            onClick={() => setRange({ from: sixMonthsFirstDay, to: today })}
+            text="Current halfyear"
+            startDate={new Date(thisYear, thisMonth - 6, 1)}
+            endDate={today}
+            currentRange={{ from: range?.from, to: range?.to }}
+            onClick={setRange}
           />
           <DateRangePill
-            text="Current  year"
-            isSelected={thisYearSelected}
-            onClick={() => setRange({ from: firstDayYear, to: today })}
+            text="Current year"
+            startDate={new Date(thisYear, 0, 1)}
+            endDate={today}
+            currentRange={{ from: range?.from, to: range?.to }}
+            onClick={setRange}
           />
         </div>
       </div>
