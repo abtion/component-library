@@ -1,0 +1,21 @@
+.SearchInput {
+  @apply flex items-center max-w-xs pl-2 overflow-hidden;
+  @apply border border-solid border-neutral rounded-lg;
+
+  &__input {
+    @apply font-light rounded-lg focus:outline-none;
+    @apply h-8 grow focus:border-primary;
+  }
+
+  &__magnifier {
+    @apply p-1 h-8 w-8 cursor-pointer rounded;
+  }
+
+  &__magnifier > svg {
+    @apply m-auto;
+  }
+
+  &__magnifier:hover {
+    @apply bg-primary-50;
+  }
+}
