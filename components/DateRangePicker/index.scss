@@ -1,19 +1,10 @@
 .rdp {
-  margin: 0 !important;
-
   --rdp-cell-size: 45px !important;
 
-  @media (min-width: 1024px) {
-    --rdp-cell-size: 40px !important;
-  }
+  --rdp-accent-color: rgb(var(--color-primary-800) / var(--tw-text-opacity)) !important;
 
-  --rdp-accent-color: rgb(
-    var(--color-primary-800) / var(--tw-text-opacity)
-  ) !important;
-
-  --rdp-background-color: rgb(
-    var(--color-primary) / var(--tw-text-opacity)
-  ) !important;
+  --rdp-background-color: rgb(var(--color-primary) / var(--tw-text-opacity)) !important;
+  margin: 0 !important;
 
   .rdp-months {
     @apply flex;
@@ -23,10 +14,8 @@
       @apply mx-auto;
     }
 
-    .rdp-month {
-      .rdp-dropdown:focus-visible:not([disabled]) option {
-        @apply bg-dark;
-      }
+    .rdp-dropdown:focus-visible:not([disabled]) option {
+      @apply bg-dark;
     }
   }
 
@@ -44,7 +33,11 @@
     }
 
     .rdp-cell:not(:last-child) .rdp-day_range_start::after {
-      box-shadow: 1rem 0 0 0.5rem blue;
+      box-shadow: 1rem 0 0 0.5rem;
     }
+  }
+
+  @media (min-width: 1024px) {
+    --rdp-cell-size: 40px !important;
   }
 }
