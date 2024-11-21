@@ -1,5 +1,5 @@
 import { type Meta, type StoryObj } from "@storybook/react"
-import CodeInput from "~/components/CodeInput"
+import { CodeInput } from "~/components/CodeInput"
 
 const meta = {
   title: "Toolbox/CodeInput",

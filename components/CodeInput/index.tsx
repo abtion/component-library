@@ -82,9 +82,7 @@ export const CodeInput = forwardRef<HTMLDivElement, CodeInputProps>(
           signal: abortController.signal,
         })
         .then((otp) => {
-          if (otp) {
-            setCode(otp.code.split(""))
-          }
+          if (otp) setCode(otp.code.split(""))
         })
         .catch((error) => {
           if (error?.message === "Aborted") return
@@ -113,7 +111,7 @@ export const CodeInput = forwardRef<HTMLDivElement, CodeInputProps>(
                 Write your code
               </span>
               <span className="hidden lg:block self-center pl-5 pr-12 text-xs whitespace-nowrap text-neutral-400">
-                code delivered by{" "}
+                Code delivered by{" "}
                 {`${deliveryMethod === "SMS" ? "sms" : "e-mail"}`}
               </span>
             </div>
@@ -139,7 +137,7 @@ export const CodeInput = forwardRef<HTMLDivElement, CodeInputProps>(
           </div>
         </div>
         <span className="block lg:hidden self-center text-center my-2 text-xs whitespace-nowrap text-neutral-400">
-          Kode sendt via {`${deliveryMethod === "SMS" ? "sms" : "e-mail"}`}
+          Code delivered by {`${deliveryMethod === "SMS" ? "sms" : "e-mail"}`}
         </span>
       </>
     )
