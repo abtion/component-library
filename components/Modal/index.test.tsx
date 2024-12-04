@@ -13,7 +13,7 @@ describe(Modal, () => {
   describe("size", () => {
     it("sets the size as small", () => {
       const { container } = renderWithRouteHistory(
-        <Modal {...testData} size="sm" />
+        <Modal {...testData} size="sm" />,
       )
 
       const modalInner = container.querySelector(".Modal__inner--sm")
@@ -22,7 +22,7 @@ describe(Modal, () => {
 
     it("sets the size as medium", () => {
       const { container } = renderWithRouteHistory(
-        <Modal {...testData} size="md" />
+        <Modal {...testData} size="md" />,
       )
 
       const modalInner = container.querySelector(".Modal__inner--md")
@@ -31,7 +31,7 @@ describe(Modal, () => {
 
     it("sets the size as large", () => {
       const { container } = renderWithRouteHistory(
-        <Modal {...testData} size="lg" />
+        <Modal {...testData} size="lg" />,
       )
 
       const modalInner = container.querySelector(".Modal__inner--lg")
@@ -42,7 +42,7 @@ describe(Modal, () => {
   describe("close button", () => {
     it("renders a link", () => {
       const { container } = renderWithRouteHistory(
-        <Modal {...testData} returnUrl="/return/route" />
+        <Modal {...testData} returnUrl="/return/route" />,
       )
 
       const closeButton = container.querySelector(".Modal__close")
@@ -52,7 +52,7 @@ describe(Modal, () => {
     it("renders a callback function", async () => {
       const mockCallBack = jest.fn()
       const { container } = renderWithRouteHistory(
-        <Modal {...testData} onClose={mockCallBack} />
+        <Modal {...testData} onClose={mockCallBack} />,
       )
 
       const closeButton = container.querySelector(".Modal__close")
@@ -67,7 +67,7 @@ describe(Modal, () => {
     const { getByText } = renderWithRouteHistory(
       <Modal {...testData}>
         <div>Inner modal content</div>
-      </Modal>
+      </Modal>,
     )
 
     const innerModalContent = getByText("Inner modal content")

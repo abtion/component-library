@@ -31,7 +31,7 @@ describe(Badge, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { getByText } = render(
-        <Badge {...defaultProps} variant="primary" />
+        <Badge {...defaultProps} variant="primary" />,
       )
 
       const bagde = getByText(defaultProps.text as string)

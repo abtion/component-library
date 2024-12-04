@@ -21,7 +21,7 @@ describe(Tag, () => {
     it("has a close button", async () => {
       const closeHandler = jest.fn()
       const { getByRole } = render(
-        <Tag {...defaultProps} onClose={closeHandler} />
+        <Tag {...defaultProps} onClose={closeHandler} />,
       )
 
       const element = getByRole("button")

@@ -26,7 +26,7 @@ const DateRangePicker = (props: { onClose: () => void }) => {
     _range: DateRange | undefined,
     selectedDay: Date,
     _activeModifiers: ActiveModifiers,
-    _e: React.MouseEvent
+    _e: React.MouseEvent,
   ) => {
     setRange((prev) =>
       pickStartDate
@@ -45,7 +45,7 @@ const DateRangePicker = (props: { onClose: () => void }) => {
                 ? selectedDay
                 : prev.from
               : undefined,
-          }
+          },
     )
     setPickStartDate((prev) => !prev)
   }

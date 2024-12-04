@@ -7,7 +7,7 @@ export type TooltipProps = {
 }
 
 export const Tooltip: React.FC<React.PropsWithChildren<TooltipProps>> = (
-  props
+  props,
 ) => {
   return (
     <span className="Tooltip">

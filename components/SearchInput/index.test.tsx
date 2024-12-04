@@ -7,7 +7,7 @@ describe(SearchInput, () => {
   it("returns the search on enter", async () => {
     const mockFn = jest.fn()
     const { container } = render(
-      <SearchInput searchPhrase={mockFn} initialValue="" />
+      <SearchInput searchPhrase={mockFn} initialValue="" />,
     )
 
     const input = container.querySelector(".SearchInput__input")
@@ -23,7 +23,7 @@ describe(SearchInput, () => {
   it("returns the search on click", async () => {
     const mockFn = jest.fn()
     const { container } = render(
-      <SearchInput searchPhrase={mockFn} initialValue="" />
+      <SearchInput searchPhrase={mockFn} initialValue="" />,
     )
 
     const input = container.querySelector(".SearchInput__input")

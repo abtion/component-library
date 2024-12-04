@@ -20,7 +20,7 @@ describe(ButtonOutline, () => {
   describe("when size is set", () => {
     it("adds size class", () => {
       const { getByText } = render(
-        <ButtonOutline {...defaultProps} size="md" />
+        <ButtonOutline {...defaultProps} size="md" />,
       )
 
       const button = getByText(defaultProps.children as string)
@@ -32,7 +32,7 @@ describe(ButtonOutline, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { getByText } = render(
-        <ButtonOutline {...defaultProps} variant="primary" />
+        <ButtonOutline {...defaultProps} variant="primary" />,
       )
 
       const button = getByText(defaultProps.children as string)
@@ -47,7 +47,7 @@ describe(ButtonOutline, () => {
         <ButtonOutline
           {...defaultProps}
           onClick={() => new Promise((resolve) => setTimeout(resolve, 200))}
-        />
+        />,
       )
       await userEvent.click(getByText(defaultProps.children as string))
       await waitFor(() => expect(getByText("Loading...")).toBeInTheDocument())
@@ -55,10 +55,10 @@ describe(ButtonOutline, () => {
 
     it("prevents calling onClick twice", async () => {
       const onClickFunc = jest.fn(
-        () => new Promise((resolve) => setTimeout(resolve, 200))
+        () => new Promise((resolve) => setTimeout(resolve, 200)),
       )
       const { getByText } = render(
-        <ButtonOutline {...defaultProps} onClick={onClickFunc} />
+        <ButtonOutline {...defaultProps} onClick={onClickFunc} />,
       )
       await userEvent.dblClick(getByText(defaultProps.children as string))
       expect(onClickFunc).toHaveBeenCalledTimes(1)

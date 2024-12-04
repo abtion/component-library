@@ -48,7 +48,7 @@ describe(Duration, () => {
         const upperLimitMs = 60 * 60 * 1000
 
         const { getByText } = render(
-          <Duration since={since} format="mm:ss" upperLimitMs={upperLimitMs} />
+          <Duration since={since} format="mm:ss" upperLimitMs={upperLimitMs} />,
         )
         expect(getByText("> 60:00")).toBeInTheDocument()
       })

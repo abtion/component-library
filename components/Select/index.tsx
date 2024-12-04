@@ -37,7 +37,7 @@ const Select = ({ classNames, ...props }: SelectProps) => {
               "Select__control--multi": state.isMulti,
               "Select__control--filled": Boolean(value && value.length),
             },
-            classNames?.control
+            classNames?.control,
           )
         },
         input: () => cn("Select__input", classNames?.input),
@@ -49,7 +49,7 @@ const Select = ({ classNames, ...props }: SelectProps) => {
               "Select__option--selected": state.isSelected,
               "Select__option--focused": state.isFocused,
             },
-            classNames?.option
+            classNames?.option,
           ),
         multiValue: () => cn("Select__multi-value", classNames?.multiValues),
       }}

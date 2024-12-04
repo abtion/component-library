@@ -19,7 +19,7 @@ const cssRoot = document.querySelector(":root")
 const cssVariables = getColorVariables(addContrastColors(colors))
 
 Object.entries(cssVariables).forEach(([name, value]) =>
-  cssRoot.style.setProperty(name, value)
+  cssRoot.style.setProperty(name, value),
 )
 
 export const parameters = {

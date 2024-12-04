@@ -37,7 +37,7 @@ export default function ButtonOutline(props: ButtonOutlineProps): JSX.Element {
       [`ButtonOutline--${variant}`]: variant,
       [`cursor-progress`]: isLoading,
     },
-    className
+    className,
   )
 
   return (
