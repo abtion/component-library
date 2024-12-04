@@ -8,7 +8,7 @@ describe(Card, () => {
     const { getByText } = render(
       <Card icon=<EnvelopeIcon /> name="cardName" description="cardDescription">
         <p>child paragraph</p>
-      </Card>
+      </Card>,
     )
 
     expect(getByText("cardName")).toBeInTheDocument()
@@ -25,7 +25,7 @@ describe(Card, () => {
         learnMoreUrl="/support"
       >
         <p>child paragraph</p>
-      </Card>
+      </Card>,
     )
     expect(getByRole("link")).toHaveTextContent("Learn more >")
   })

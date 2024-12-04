@@ -12,7 +12,7 @@ const componentFolders = {
 export default function SourceLinks() {
   const [framework, setFramework] = useLocalStorage(
     "selected-framework",
-    "Rails"
+    "Rails",
   )
   const [copied, setCopied] = useState(false)
   const componentFolder = componentFolders[framework]
@@ -31,8 +31,9 @@ export default function SourceLinks() {
   const { displayName: name } = component
   const gitSource = `https://github.com/abtion/component-library/blob/main/components/${name}`
 
-  const zip =
-    require(`!!file-loader?name=[folder].zip!./zip-folder-loader.js!~/components/${name}/index.tsx`).default
+  const zip = require(
+    `!!file-loader?name=[folder].zip!./zip-folder-loader.js!~/components/${name}/index.tsx`,
+  ).default
 
   const dlCommand = `curl -L ${location.origin}/${zip} -o c.zip && unzip -o c.zip -d ${componentFolder} && rm c.zip`
 

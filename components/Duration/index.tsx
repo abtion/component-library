@@ -27,7 +27,7 @@ export default function Duration({
       setDuration(getDuration(since))
     },
     refreshRate,
-    [since]
+    [since],
   )
 
   if (upperLimitMs && duration > upperLimitMs) {

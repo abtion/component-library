@@ -29,12 +29,12 @@ export const CodeInput = forwardRef<HTMLDivElement, CodeInputProps>(
     const inputRefs = useRef<React.RefObject<HTMLInputElement>[]>(
       Array(6)
         .fill("*")
-        .map(() => createRef<HTMLInputElement>())
+        .map(() => createRef<HTMLInputElement>()),
     ).current
 
     const handleDigitChange = (
       index: number,
-      event: React.FormEvent<HTMLInputElement>
+      event: React.FormEvent<HTMLInputElement>,
     ) => {
       const {
         currentTarget: { value: string },
@@ -48,7 +48,7 @@ export const CodeInput = forwardRef<HTMLDivElement, CodeInputProps>(
 
     const handleKeyDown = (
       index: number,
-      event: React.KeyboardEvent<HTMLInputElement>
+      event: React.KeyboardEvent<HTMLInputElement>,
     ) => {
       switch (event.key) {
         case "ArrowLeft": {
@@ -141,6 +141,6 @@ export const CodeInput = forwardRef<HTMLDivElement, CodeInputProps>(
         </span>
       </>
     )
-  }
+  },
 )
 CodeInput.displayName = "CodeInput"

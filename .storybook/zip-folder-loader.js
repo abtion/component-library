@@ -12,7 +12,7 @@ module.exports = function () {
       const filePath = path.join(dirPath, file)
       zip.file(
         path.basename(dirPath) + "/" + file,
-        fs.readFileSync(filePath, "utf-8")
+        fs.readFileSync(filePath, "utf-8"),
       )
     })
   }

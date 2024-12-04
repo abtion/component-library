@@ -10,7 +10,7 @@ describe(FileInput, () => {
         onChangeHandler={jest.fn()}
         element={<div />}
         allowedFileTypes={["image/png"]}
-      />
+      />,
     )
     const fileInput = container.querySelector('input[type="file"]')
     expect(fileInput).toBeInTheDocument()
@@ -24,7 +24,7 @@ describe(FileInput, () => {
           onChangeHandler={onChangeHandler}
           element={<div />}
           allowedFileTypes={["image/png"]}
-        />
+        />,
       )
       const button = container.getElementsByTagName("input")[0]
       fireEvent.change(button, {
@@ -47,7 +47,7 @@ describe(FileInput, () => {
           onChangeHandler={onChangeHandler}
           element={<div />}
           allowedFileTypes={["image/png"]}
-        />
+        />,
       )
       const files = [
         new File(["(⌐□_□)"], "chucknorris.png", { type: "image/png" }),

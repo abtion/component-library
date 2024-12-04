@@ -5,7 +5,7 @@ import ModalContent from "."
 describe(ModalContent, () => {
   it("renders it's children", () => {
     const { getByText } = renderWithRouteHistory(
-      <ModalContent>Some content</ModalContent>
+      <ModalContent>Some content</ModalContent>,
     )
 
     const content = getByText("Some content")

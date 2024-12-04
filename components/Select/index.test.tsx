@@ -35,17 +35,17 @@ describe(Select, () => {
     ]
     const mockChangeHandler = jest.fn()
     const { container } = render(
-      <Select options={options} onChange={mockChangeHandler} />
+      <Select options={options} onChange={mockChangeHandler} />,
     )
 
     await selectOption(
       container.querySelector(".Select") as HTMLDivElement,
-      "label2"
+      "label2",
     )
 
     expect(mockChangeHandler).toHaveBeenCalledWith(
       { value: "value2", label: "label2" },
-      expect.anything()
+      expect.anything(),
     )
   })
 
@@ -66,28 +66,28 @@ describe(Select, () => {
     ]
     const mockChangeHandler = jest.fn()
     const { container } = render(
-      <Select options={options} isMulti onChange={mockChangeHandler} />
+      <Select options={options} isMulti onChange={mockChangeHandler} />,
     )
 
     await selectOption(
       container.querySelector(".Select") as HTMLDivElement,
-      "label2"
+      "label2",
     )
     await selectOption(
       container.querySelector(".Select") as HTMLDivElement,
-      "label3"
+      "label3",
     )
 
     expect(mockChangeHandler).toHaveBeenCalledWith(
       [{ value: "value2", label: "label2" }],
-      expect.anything()
+      expect.anything(),
     )
     expect(mockChangeHandler).toHaveBeenCalledWith(
       [
         { value: "value2", label: "label2" },
         { value: "value3", label: "label3" },
       ],
-      expect.anything()
+      expect.anything(),
     )
   })
 })

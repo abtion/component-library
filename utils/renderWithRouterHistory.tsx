@@ -10,7 +10,7 @@ export interface RenderResult extends ReturnType<typeof tlRender> {
 
 export default function renderWithRouteHistory(
   component: JSX.Element,
-  paths?: string[]
+  paths?: string[],
 ): RenderResult {
   const history = createMemoryHistory({
     initialEntries: [`/`, ...(paths || [""])],
@@ -21,7 +21,7 @@ export default function renderWithRouteHistory(
       <Routes>
         <Route path="/*" element={component} />
       </Routes>
-    </Router>
+    </Router>,
   )
 
   return { history, ...context }

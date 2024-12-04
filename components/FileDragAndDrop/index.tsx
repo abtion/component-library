@@ -59,7 +59,7 @@ export const FileDragAndDrop = (props: FileDragAndDropProps) => {
         setErrors(
           `${f.name} - overstiger max filstørrelse (${
             MAX_SIZE_BYTES / 1024 / 1024
-          } MB)`
+          } MB)`,
         )
       else if (files.length + filesToAdd.length >= MAX_FILES_NO)
         setErrors(`Max antal filer overskredet (${MAX_FILES_NO})`)
@@ -68,7 +68,7 @@ export const FileDragAndDrop = (props: FileDragAndDropProps) => {
           new File([f], getUniqueFilename([...filesToAdd, ...files], f), {
             type: f.type,
             lastModified: f.lastModified,
-          })
+          }),
         )
     })
     setFiles((prev) => [...prev, ...filesToAdd])

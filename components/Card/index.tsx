@@ -22,19 +22,19 @@ export default function Card({
 }: CardProps): JSX.Element {
   const productCardClassName = classNames(
     "ProductCard",
-    isDark && "ProductCard--dark"
+    isDark && "ProductCard--dark",
   )
   const titleClassName = classNames(
     "ProductCard__title",
-    isDark && "ProductCard__title--dark"
+    isDark && "ProductCard__title--dark",
   )
   const descriptionClassName = classNames(
     "ProductCard__description",
-    isDark && "ProductCard__description--dark"
+    isDark && "ProductCard__description--dark",
   )
   const learnMoreClassName = classNames(
     "ProductCard__learnMore",
-    isDark && "ProductCard__learnMore--dark"
+    isDark && "ProductCard__learnMore--dark",
   )
 
   return (

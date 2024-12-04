@@ -28,8 +28,8 @@ export const DateRangePill = (props: {
         isSelected
           ? "text-primary font-bold bg-primary-100 lg:bg-primary-100"
           : disabled
-          ? "text-white/40 cursor-not-allowed"
-          : `text-white ${disabled ? "" : "cursor-pointer"}`
+            ? "text-white/40 cursor-not-allowed"
+            : `text-white ${disabled ? "" : "cursor-pointer"}`
       }`}
       onClick={
         disabled ? () => {} : () => onClick({ from: startDate, to: endDate })

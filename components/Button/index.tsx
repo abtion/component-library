@@ -37,7 +37,7 @@ export default function Button(props: ButtonProps): JSX.Element {
       [`Button--${variant}`]: variant,
       [`cursor-progress`]: isLoading,
     },
-    className
+    className,
   )
 
   return (

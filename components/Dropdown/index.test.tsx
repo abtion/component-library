@@ -20,7 +20,7 @@ describe(Dropdown, () => {
         active={{ key: "1", text: "activeElement" }}
         onClickAction={jest.fn()}
         options={dummyObject}
-      />
+      />,
     )
 
     const dropdown = getByText("activeElement")
@@ -38,7 +38,7 @@ describe(Dropdown, () => {
         active={active}
         onClickAction={mockedFunction}
         options={dummyObject}
-      />
+      />,
     )
 
     const dropdown = getByText(active.text)
@@ -60,7 +60,7 @@ describe(Dropdown, () => {
         active={active}
         onClickAction={mockedFunction}
         options={dummyObject}
-      />
+      />,
     )
 
     const dropdown = getByText(active.text)

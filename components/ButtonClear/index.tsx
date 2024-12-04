@@ -37,7 +37,7 @@ export default function ButtonClear(props: ButtonClearProps): JSX.Element {
       [`ButtonClear--${variant}`]: variant,
       [`cursor-progress`]: isLoading,
     },
-    className
+    className,
   )
 
   return (
