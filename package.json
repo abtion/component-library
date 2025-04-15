@@ -56,7 +56,7 @@
     "@types/testing-library__jest-dom": "^6.0.0",
     "@types/webpack-env": "^1.18.8",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
+    "@typescript-eslint/parser": "^8.30.1",
     "@whitespace/storybook-addon-html": "^6.1.1",
     "babel-loader": "^9.2.1",
     "eslint": "^8.57.0",
