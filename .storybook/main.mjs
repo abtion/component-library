@@ -1,15 +1,21 @@
-const path = require("path")
-const { cascadeLayerPrefixer } = require("../utils/cascadeLayerPrefixer")
+import path from "path"
+import { cascadeLayerPrefixer } from "../utils/cascadeLayerPrefixer"
+import tailwindcss from "tailwindcss"
+import autoprefixer from "autoprefixer"
 
-module.exports = {
-  stories: ["../stories/Introduction.stories.mdx", "../stories/**/*stories*"],
+export default {
+  stories: ["../stories/Introduction.mdx", "../stories/**/*stories*"],
+
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@whitespace/storybook-addon-html",
     "@storybook/addon-a11y",
+    "@storybook/addon-webpack5-compiler-swc",
   ],
+
   staticDirs: ["./static"],
+
   webpackFinal: (config) => {
     return {
       ...config,
@@ -30,18 +36,6 @@ module.exports = {
       module: {
         ...config.module,
         rules: [
-          // Add SVG support
-          {
-            test: /\.svg$/,
-            issuer: /\.[tj]sx?$/,
-            use: [
-              {
-                loader: "@svgr/webpack",
-                options: { svgoConfig: { plugins: { removeViewBox: false } } },
-              },
-            ],
-          },
-          // Add sass support
           {
             test: /\.scss$/,
             use: [
@@ -52,12 +46,12 @@ module.exports = {
                 options: {
                   postcssOptions: {
                     plugins: [
-                      require("tailwindcss"),
+                      tailwindcss,
                       cascadeLayerPrefixer({
                         layerName: "components",
                         fileNameMatcher: /\/components\/.+/,
                       }),
-                      require("autoprefixer"),
+                      autoprefixer,
                     ],
                   },
                 },
@@ -71,11 +65,15 @@ module.exports = {
       plugins: [...config.plugins],
     }
   },
+
   framework: {
     name: "@storybook/react-webpack5",
     options: {},
   },
-  docs: {
-    autodocs: true,
+
+  docs: {},
+
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
   },
 }
