@@ -76,7 +76,6 @@ export default defineConfig([
       ecmaVersion: 5,
       sourceType: "script",
       parserOptions: {
-        tsconfigRootDir: "/home/jespers/component-library",
         project: ["./tsconfig.json"],
       },
     },
