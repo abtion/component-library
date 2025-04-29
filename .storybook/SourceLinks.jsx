@@ -18,11 +18,8 @@ export default function SourceLinks() {
   const componentFolder = componentFolders[framework]
   const copiedTimeoutRef = useRef(null)
 
-  const {
-    attachedCSFFile: {
-      meta: { component },
-    },
-  } = useContext(DocsContext)
+  const { attachedCSFFiles } = useContext(DocsContext)
+  const component = Array.from(attachedCSFFiles)[0]?.meta?.component
 
   if (!component) {
     return null

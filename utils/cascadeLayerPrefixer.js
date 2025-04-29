@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const postcss = require("postcss")
-/* eslint-enable @typescript-eslint/no-var-requires */
+import postcss from "postcss"
 
 // PostCSS plugin for wrapping matching CSS files in a cascade layer
 export const cascadeLayerPrefixer = ({ fileNameMatcher, layerName } = {}) => ({
