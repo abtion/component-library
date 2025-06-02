@@ -57,7 +57,7 @@
     "@types/webpack-env": "^1.18.8",
     "@typescript-eslint/eslint-plugin": "^8.31.0",
     "@typescript-eslint/parser": "^8.31.0",
-    "@whitespace/storybook-addon-html": "^6.1.1",
+    "@whitespace/storybook-addon-html": "^7.0.0",
     "eslint": "^9.25.1",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.27.5",
