@@ -8,7 +8,7 @@
     "@swc/jest": "^0.2.38",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@uidotdev/usehooks": "^2.4.1",
-    "ag-grid-react": "^33.2.1",
+    "ag-grid-react": "^33.3.1",
     "autoprefixer": "^10.4.21",
     "classnames": "^2.3.2",
     "css-loader": "^7.1.2",
