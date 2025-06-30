@@ -1,7 +1,6 @@
 import path from "path"
 import { cascadeLayerPrefixer } from "../utils/cascadeLayerPrefixer"
-import tailwindcss from "tailwindcss"
-import autoprefixer from "autoprefixer"
+import { referencer } from "../utils/referencer"
 
 export default {
   stories: ["../stories/Introduction.mdx", "../stories/**/*stories*"],
@@ -46,12 +45,15 @@ export default {
                 options: {
                   postcssOptions: {
                     plugins: [
-                      tailwindcss,
+                      referencer({
+                        referencePath: path.resolve(__dirname, "../main.scss"),
+                        fileNameMatcher: /\/components\/.+/,
+                      }),
+                      `@tailwindcss/postcss`,
                       cascadeLayerPrefixer({
                         layerName: "components",
                         fileNameMatcher: /\/components\/.+/,
                       }),
-                      autoprefixer,
                     ],
                   },
                 },
