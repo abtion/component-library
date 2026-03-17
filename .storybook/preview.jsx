@@ -15,6 +15,8 @@ import colors from "../colors.json"
 import MuffibookTheme from "./MuffibookTheme"
 import SourceLinks from "./SourceLinks"
 
+import "../main.css"
+
 const cssRoot = document.querySelector(":root")
 const cssVariables = getColorVariables(addContrastColors(colors))
 
