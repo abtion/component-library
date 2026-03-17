@@ -11,7 +11,7 @@ export default function Checkbox(props: CheckboxProps): JSX.Element {
 
   // Base styles from previous SCSS inlined as Tailwind classes
   const base =
-    "appearance-none inline-flex w-4 h-4 bg-white border-neutral-300 rounded-sm border-[1px] outline-none"
+    "appearance-none inline-flex w-4 h-4 bg-white border-neutral-300 rounded-xs border-[1px] outline-none"
 
   // Interaction states (only applied when not disabled)
   const hover = disabled ? "" : "hover:rounded-[4px]"
