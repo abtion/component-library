@@ -11,12 +11,12 @@ export default function RadioButton(props: RadioButtonProps): JSX.Element {
 
   // Base styles from previous SCSS inlined as Tailwind classes
   const base =
-    "appearance-none inline-flex items-center justify-center w-4 h-4 bg-white border-neutral-300 border rounded-full border-[1px] transition-colors outline-none"
+    "appearance-none inline-flex items-center justify-center w-4 h-4 bg-white border-neutral-300 border rounded-full border-[1px] transition-colors outline-none before:block before:bg-transparent before:w-[6px] before:h-[6px] before:rounded-full before:scale-0 before:transition-transform"
 
   const focus = disabled
     ? ""
     : "focus:ring-2 focus:ring-offset-2 focus:ring-primary-400"
-  const checkedClasses = checked ? "border-none bg-primary-500" : ""
+  const checkedClasses = checked ? "border-none bg-primary-500 before:bg-white before:scale-100" : ""
   const disabledClasses = disabled
     ? "select-none border-neutral-200 bg-neutral-100 cursor-not-allowed"
     : ""
