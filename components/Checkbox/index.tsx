@@ -11,7 +11,7 @@ export default function Checkbox(props: CheckboxProps): JSX.Element {
 
   // Base styles from previous SCSS inlined as Tailwind classes
   const base =
-    "appearance-none inline-flex w-4 h-4 bg-white border-neutral-300 rounded-xs border-[1px] outline-none"
+    "appearance-none inline-flex w-4 h-4 bg-white border-neutral-300 rounded-xs border-[1px] outline-none before:content-['']"
 
   // Interaction states (only applied when not disabled)
   const hover = disabled ? "" : "hover:rounded-[4px]"
@@ -25,7 +25,7 @@ export default function Checkbox(props: CheckboxProps): JSX.Element {
   // background and border changes here. If you need the exact mask artifact,
   // prefer to render a custom element instead of a native input or keep the SCSS.
   const checkedClasses = checked
-    ? "border-none bg-primary-500 rounded-[4px]"
+    ? `border-none bg-primary-500 rounded-[4px] before:bg-cover before:bg-white before:w-full before:h-full before:bg-no-repeat before:bg-center before:mask-[url(/components/Checkbox/check-icon.svg)] before:mask-size-cover before:scale-100`
     : ""
   const disabledClasses = disabled
     ? "select-none border-neutral-200 bg-neutral-100 cursor-not-allowed"
