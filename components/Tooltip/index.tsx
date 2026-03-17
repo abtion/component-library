@@ -11,10 +11,7 @@ export const Tooltip: React.FC<React.PropsWithChildren<TooltipProps>> = (
 ) => {
   const { tip, className, children } = props
 
-  // Parent uses `group` so the child can react to hover via `group-hover:*`
   const containerClass = twMerge("relative inline-block group", className ?? "")
-
-  // Hidden by default, becomes a flex column when parent is hovered
   const boxClass =
     "hidden group-hover:flex flex-col absolute items-center bottom-full left-1/2 -translate-x-1/2 z-10 overflow-visible"
 

@@ -25,7 +25,6 @@ export default function SearchInput({
     searchPhrase(search)
   }
 
-  // Extract any className provided for the input so we can merge it with defaults
   const { className, ...inputProps } = restInputProps as {
     className?: string
     [key: string]: any

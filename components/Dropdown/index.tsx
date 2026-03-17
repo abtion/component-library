@@ -18,7 +18,6 @@ export default function Dropdown({
   const [isOpen, setIsOpen] = useState(false)
   const ref = useRef(null)
 
-  // Base classes inlined from previous SCSS
   const dropdownBase = "relative cursor-pointer w-auto"
   const dropdownSizeMap: Record<Sizes, string> = {
     [Sizes.Large]: "min-w-[200px]",

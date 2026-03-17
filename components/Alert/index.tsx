@@ -33,7 +33,6 @@ export default function Alert(props: AlertProps): JSX.Element {
     info: "text-info-500 hover:text-info-700",
   }
 
-  // original SCSS used padding-right: 3.25rem for dismissable alerts -> use arbitrary value
   const dismissableClasses = onClose ? "relative pr-[3.25rem]" : ""
 
   const usedClassName = twMerge(
