@@ -25,8 +25,7 @@ const Select = ({ classNames, ...props }: SelectProps) => {
         IndicatorSeparator: null,
       }}
       classNames={{
-        container: () =>
-          twMerge("w-60", classNames?.container),
+        container: () => twMerge("w-60", classNames?.container),
         control: (state) => {
           const value = state.getValue()
           const controlBase =
@@ -45,8 +44,7 @@ const Select = ({ classNames, ...props }: SelectProps) => {
             classNames?.control,
           )
         },
-        input: () =>
-          twMerge("py-2", classNames?.input),
+        input: () => twMerge("py-2", classNames?.input),
         menu: () =>
           twMerge(
             "border leading-4 focus:ring-1 focus:outline-none shadow-sm mt-1 border-neutral-300 rounded-md py-1 w-60",

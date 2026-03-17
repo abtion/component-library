@@ -22,9 +22,9 @@ export default function Input(props: InputProps): JSX.Element {
   }
 
   const variantMap: Record<NonNullable<InputProps["variant"]>, string> = {
-    default: "border-neutral-300 focus:ring-primary-400 focus:border-primary-400",
-    error:
-      "border-danger-500 focus:ring-danger-400 focus:border-danger-400",
+    default:
+      "border-neutral-300 focus:ring-primary-400 focus:border-primary-400",
+    error: "border-danger-500 focus:ring-danger-400 focus:border-danger-400",
   }
 
   const usedClassName = twMerge(

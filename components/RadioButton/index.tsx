@@ -16,7 +16,9 @@ export default function RadioButton(props: RadioButtonProps): JSX.Element {
   const focus = disabled
     ? ""
     : "focus:ring-2 focus:ring-offset-2 focus:ring-primary-400"
-  const checkedClasses = checked ? "border-none bg-primary-500 before:bg-white before:scale-100" : ""
+  const checkedClasses = checked
+    ? "border-none bg-primary-500 before:bg-white before:scale-100"
+    : ""
   const disabledClasses = disabled
     ? "select-none border-neutral-200 bg-neutral-100 cursor-not-allowed"
     : ""

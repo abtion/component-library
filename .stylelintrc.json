@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "stylelint-config-recommended",
-    "stylelint-config-tailwindcss"
-  ],
+  "extends": ["stylelint-config-recommended", "stylelint-config-tailwindcss"],
   "rules": {
     "selector-class-pattern": "^[a-zA-Z]+([a-zA-Z0-9-_]+[a-zA-Z0-9]+)*$"
   }
