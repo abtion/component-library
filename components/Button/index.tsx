@@ -5,14 +5,14 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "xs" | "sm" | "md" | "lg" | "xl"
   variant?:
-    | "basic"
-    | "secondary"
-    | "primary"
-    | "neutral"
-    | "success"
-    | "danger"
-    | "warning"
-    | "info"
+  | "basic"
+  | "secondary"
+  | "primary"
+  | "neutral"
+  | "success"
+  | "danger"
+  | "warning"
+  | "info"
 }
 
 export default function Button(props: ButtonProps): JSX.Element {
@@ -31,7 +31,7 @@ export default function Button(props: ButtonProps): JSX.Element {
   }
 
   const base =
-    "relative border border-transparent font-medium leading-4 shadow-sm rounded-md"
+    "relative border border-transparent font-medium leading-4 shadow-xs rounded-md"
 
   const sizeMap: Record<NonNullable<ButtonProps["size"]>, string> = {
     xs: "px-2.5 py-1 text-xs",
