@@ -1,6 +1,5 @@
-import classNames from "classnames"
+import { twMerge } from "tailwind-merge"
 import React from "react"
-import "./index.scss"
 
 export interface LoaderProps extends React.HTMLAttributes<HTMLDivElement> {
   text?: string
@@ -15,9 +14,12 @@ export default function Loader({
   textClassName,
   ...rest
 }: LoaderProps): JSX.Element {
-  const usedClassName = classNames("Loader", className)
-  const usedSpinnerClassName = classNames("Loader__spinner", spinnerClassName)
-  const usedTextClassName = classNames("Loader__text", textClassName)
+  const usedClassName = twMerge("text-center", className)
+  const usedSpinnerClassName = twMerge(
+    "border-2 border-current rounded-full border-l-transparent w-10 h-10 animate-spin mx-auto",
+    spinnerClassName,
+  )
+  const usedTextClassName = twMerge("text-neutral-500 mt-2", textClassName)
 
   return (
     <div className={usedClassName} {...rest}>

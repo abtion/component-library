@@ -1,5 +1,5 @@
 import React, { ReactElement, useRef } from "react"
-import classNames from "classnames"
+import { twMerge } from "tailwind-merge"
 
 export interface FileInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -25,7 +25,7 @@ export default function FileInput(props: FileInputProps): JSX.Element {
     ...restInputProps
   } = props
 
-  const usedClassName = classNames("Button", className)
+  const usedClassName = twMerge("Button", className)
   const inputRef = useRef<HTMLInputElement>(null)
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {

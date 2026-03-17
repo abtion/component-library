@@ -14,10 +14,10 @@ export const CombinedInputAndButton = (): JSX.Element => (
     <Input
       variant="default"
       size="md"
-      className="rounded-l-md"
+      className="rounded-r-none"
       placeholder="Type here"
     />
-    <Button variant="primary" size="md" className="rounded-r-md -ml-px">
+    <Button variant="primary" size="md" className="rounded-l-none -ml-px">
       Submit
     </Button>
   </div>

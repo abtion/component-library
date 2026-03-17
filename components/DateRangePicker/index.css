@@ -1,9 +1,13 @@
+@reference "../../main.css";
+
 .rdp {
   --rdp-cell-size: 45px !important;
-
-  --rdp-accent-color: rgb(var(--color-primary-800) / var(--tw-text-opacity)) !important;
-
-  --rdp-background-color: rgb(var(--color-primary) / var(--tw-text-opacity)) !important;
+  --rdp-accent-color: rgb(
+    var(--color-primary-800) / var(--tw-text-opacity)
+  ) !important;
+  --rdp-background-color: rgb(
+    var(--color-primary) / var(--tw-text-opacity)
+  ) !important;
   margin: 0 !important;
 
   .rdp-months {

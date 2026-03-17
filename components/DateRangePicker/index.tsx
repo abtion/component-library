@@ -6,7 +6,7 @@ import {
   DayPicker,
   SelectRangeEventHandler,
 } from "react-day-picker"
-import "./index.scss"
+import "./index.css"
 import { da } from "date-fns/locale"
 import "react-day-picker/dist/style.css"
 
