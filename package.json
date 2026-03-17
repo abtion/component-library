@@ -72,8 +72,9 @@
     "jest-environment-jsdom": "^29.7.0",
     "prettier": "^3.4.2",
     "storybook": "^8.6.12",
-    "stylelint": "^16.18.0",
-    "stylelint-config-sass-guidelines": "^12.1.0"
+    "stylelint": "^17.4.0",
+    "stylelint-config-recommended": "^18.0.0",
+    "stylelint-config-tailwindcss": "^1.0.1"
   },
   "scripts": {
     "start": "storybook dev -p 6006",
@@ -82,10 +83,10 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "npm run lint-style && npm run lint-eslint && npm run lint-prettier",
-    "lint-style": "stylelint ./**/*.scss",
+    "lint-style": "stylelint ./**/*.css",
     "lint-eslint": "eslint .",
     "lint-prettier": "prettier . --check",
-    "format": "prettier --write . && stylelint --fix ./**/*.scss"
+    "format": "prettier --write . && stylelint --fix ./**/*.css"
   },
   "type": "module",
   "browserslist": [
