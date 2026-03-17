@@ -26,21 +26,15 @@ const Select = ({ classNames, ...props }: SelectProps) => {
       }}
       classNames={{
         container: () =>
-          twMerge(
-            // base width from previous SCSS
-            "w-60",
-            classNames?.container,
-          ),
+          twMerge("w-60", classNames?.container),
         control: (state) => {
           const value = state.getValue()
-          // base control styles
           const controlBase =
             "border text-sm leading-4 focus:ring-1 focus:outline-none shadow-sm border-neutral-300 rounded-md pl-5 pr-3"
           const focused = state.isFocused
             ? "ring-primary-400 border-primary-400"
             : ""
           const disabled = state.isDisabled ? "text-neutral-400" : ""
-          // original SCSS applied pl-1 when multi and filled
           const multiFilled =
             state.isMulti && Boolean(value && value.length) ? "pl-1" : ""
           return twMerge(
@@ -52,20 +46,14 @@ const Select = ({ classNames, ...props }: SelectProps) => {
           )
         },
         input: () =>
-          twMerge(
-            // input padding
-            "py-2",
-            classNames?.input,
-          ),
+          twMerge("py-2", classNames?.input),
         menu: () =>
           twMerge(
-            // menu base translated from SCSS (includes width)
             "border leading-4 focus:ring-1 focus:outline-none shadow-sm mt-1 border-neutral-300 rounded-md py-1 w-60",
             classNames?.menu,
           ),
         option: (state) =>
           twMerge(
-            // option base
             "px-5 py-2 text-sm",
             state.isFocused ? "bg-primary-100 text-primary-100-contrast" : "",
             state.isSelected ? "bg-primary-500 text-primary-500-contrast" : "",
