@@ -24,7 +24,7 @@ describe(Badge, () => {
 
       const bagde = getByText(defaultProps.text as string)
 
-      expect(bagde).toHaveClass("Badge--sm")
+      expect(bagde).toHaveClass("text-xs")
     })
   })
 
@@ -36,7 +36,7 @@ describe(Badge, () => {
 
       const bagde = getByText(defaultProps.text as string)
 
-      expect(bagde).toHaveClass("Badge--primary")
+      expect(bagde).toHaveClass("text-primary-800")
     })
   })
 })

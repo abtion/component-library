@@ -1,8 +1,7 @@
-import classNames from "classnames"
 import React, { useRef, useState } from "react"
 import { useOnClickOutside } from "usehooks-ts"
 import ChevronDownIcon from "@heroicons/react/24/solid/ChevronDownIcon"
-import "./index.scss"
+import { twMerge } from "tailwind-merge"
 
 export enum Sizes {
   Small = "sm",
@@ -18,28 +17,43 @@ export default function Dropdown({
 }: DropdownProps): JSX.Element {
   const [isOpen, setIsOpen] = useState(false)
   const ref = useRef(null)
-  const optionClasses = (option: string) => {
-    return classNames("Dropdown__option", {
-      ["Dropdown__active"]: option == active?.key,
-      [`Dropdown__option--${size}`]: size,
-    })
+
+  const dropdownBase = "relative cursor-pointer w-auto"
+  const dropdownSizeMap: Record<Sizes, string> = {
+    [Sizes.Large]: "min-w-[200px]",
+    [Sizes.Medium]: "",
+    [Sizes.Small]: "",
   }
-  const dropdownClasses = classNames("Dropdown", {
-    [`Dropdown--${size}`]: size,
-  })
 
-  const buttonClasses = classNames("Dropdown__button", {
-    "Dropdown__button-active": isOpen,
-    [`Dropdown__button--${size}`]: size,
-  })
+  const buttonBase =
+    "bg-neutral-50 w-full h-full pr-7 pl-1 py-1 border border-solid border-neutral-500 rounded-lg relative inline-flex mx-auto capitalize items-center justify-between"
+  const buttonSizeMap: Record<Sizes, string> = {
+    [Sizes.Large]: "",
+    [Sizes.Medium]: "",
+    [Sizes.Small]: "h-8 pt-[5px] w-[70px] pl-1 pb-1 text-sm",
+  }
 
-  const optionsClasses = classNames("Dropdown__options", {
-    [`Dropdown__options--${size}`]: size,
-  })
+  const optionsBase =
+    "absolute left-0 bg-neutral-50 capitalize border border-solid border-neutral-500 rounded-lg shadow p-1 mx-auto w-full overflow-y-scroll z-50 max-h-[calc(40px*10+16px)]"
+  const optionsSizeMap: Record<Sizes, string> = {
+    [Sizes.Large]: "top-6",
+    [Sizes.Medium]: "top-6",
+    [Sizes.Small]: "top-5 w-[70px]",
+  }
 
-  const arrowClasses = classNames("Dropdown__button-arrow", {
-    [`Dropdown__button-arrow--${size}`]: size,
-  })
+  const optionBase = "-mx-1 px-1 py-1 hover:bg-primary-50"
+  const optionSizeMap: Record<Sizes, string> = {
+    [Sizes.Large]: "",
+    [Sizes.Medium]: "",
+    [Sizes.Small]: "text-sm",
+  }
+
+  const arrowBase = "absolute right-1"
+  const arrowSizeMap: Record<Sizes, string> = {
+    [Sizes.Large]: "top-2",
+    [Sizes.Medium]: "top-2",
+    [Sizes.Small]: "top-1.5",
+  }
 
   useOnClickOutside(ref, () => {
     setIsOpen(false)
@@ -49,11 +63,27 @@ export default function Dropdown({
     onClickAction(option)
     setIsOpen(false)
   }
+
+  const dropdownClasses = twMerge(dropdownBase, dropdownSizeMap[size], "")
+
+  const buttonClasses = (isActive: boolean) =>
+    twMerge(buttonBase, buttonSizeMap[size], isActive ? "border-primary" : "")
+
+  const optionsClasses = twMerge(optionsBase, optionsSizeMap[size])
+
+  const arrowClasses = twMerge(arrowBase, arrowSizeMap[size])
+
+  const optionClasses = (optionKey: string, isSelected: boolean) =>
+    twMerge(optionBase, optionSizeMap[size], isSelected ? "bg-light" : "")
+
   return (
     <div className="h-52">
       <div className={dropdownClasses} ref={ref}>
-        <div onClick={() => setIsOpen(!isOpen)} className={buttonClasses}>
-          <span>{active?.text}</span>
+        <div
+          onClick={() => setIsOpen(!isOpen)}
+          className={buttonClasses(isOpen)}
+        >
+          <span className="truncate">{active?.text}</span>
           <div className={arrowClasses}>
             <ChevronDownIcon className="h-4 w-4" />
           </div>
@@ -63,7 +93,10 @@ export default function Dropdown({
             {options.map((option: OptionObject, index: number) => (
               <div
                 key={index}
-                className={optionClasses(option.key)}
+                className={optionClasses(
+                  option.key,
+                  option.key === active?.key,
+                )}
                 onClick={() => selectOption(option)}
               >
                 {option.text}

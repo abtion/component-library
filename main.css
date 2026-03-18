@@ -1,12 +1,5 @@
-@layer tailwind-base, components, tailwind-utils;
-
-@layer tailwind-base {
-  @tailwind base;
-}
-@layer tailwind-utils {
-  @tailwind components;
-  @tailwind utilities;
-}
+@import "tailwindcss";
+@config './tailwind.config.js';
 
 @font-face {
   font-family: "Inter";
@@ -44,6 +37,8 @@
   src: url("fonts/Inter-Black.ttf");
 }
 
-a {
-  @apply text-primary-600;
+@layer base {
+  a {
+    @apply text-primary-600;
+  }
 }

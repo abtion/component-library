@@ -15,8 +15,8 @@ describe(Loader, () => {
       <Loader spinnerClassName="the-spinner" textClassName="the-text" />,
     )
 
-    const spinnerElement = container.querySelector(".Loader__spinner")
-    const textElement = container.querySelector(".Loader__text")
+    const spinnerElement = container.querySelector(".animate-spin")
+    const textElement = container.querySelector(".text-neutral-500")
 
     expect(spinnerElement).toHaveClass("the-spinner")
     expect(textElement).toHaveClass("the-text")

@@ -16,7 +16,7 @@ describe(Modal, () => {
         <Modal {...testData} size="sm" />,
       )
 
-      const modalInner = container.querySelector(".Modal__inner--sm")
+      const modalInner = container.querySelector(".max-w-lg")
       expect(modalInner).toBeInTheDocument()
     })
 
@@ -25,7 +25,7 @@ describe(Modal, () => {
         <Modal {...testData} size="md" />,
       )
 
-      const modalInner = container.querySelector(".Modal__inner--md")
+      const modalInner = container.querySelector(".max-w-4xl")
       expect(modalInner).toBeInTheDocument()
     })
 
@@ -34,7 +34,7 @@ describe(Modal, () => {
         <Modal {...testData} size="lg" />,
       )
 
-      const modalInner = container.querySelector(".Modal__inner--lg")
+      const modalInner = container.querySelector(".max-w-7xl")
       expect(modalInner).toBeInTheDocument()
     })
   })
@@ -45,7 +45,7 @@ describe(Modal, () => {
         <Modal {...testData} returnUrl="/return/route" />,
       )
 
-      const closeButton = container.querySelector(".Modal__close")
+      const closeButton = container.querySelector("a")
       expect(closeButton).toHaveAttribute("href", "/return/route")
     })
 
@@ -55,7 +55,7 @@ describe(Modal, () => {
         <Modal {...testData} onClose={mockCallBack} />,
       )
 
-      const closeButton = container.querySelector(".Modal__close")
+      const closeButton = container.querySelector(".cursor-pointer")
 
       if (closeButton) await userEvent.click(closeButton)
 

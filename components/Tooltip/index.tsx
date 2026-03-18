@@ -1,5 +1,5 @@
 import React from "react"
-import "./index.scss"
+import { twMerge } from "tailwind-merge"
 
 export type TooltipProps = {
   tip: string
@@ -9,13 +9,22 @@ export type TooltipProps = {
 export const Tooltip: React.FC<React.PropsWithChildren<TooltipProps>> = (
   props,
 ) => {
+  const { tip, className, children } = props
+
+  const containerClass = twMerge("relative inline-block group", className ?? "")
+  const boxClass =
+    "hidden group-hover:flex flex-col absolute items-center bottom-full left-1/2 -translate-x-1/2 z-10 overflow-visible"
+
+  const textClass = "bg-primary-800 text-primary-800-contrast p-1 rounded-lg"
+  const svgClass = "text-primary-800 h-1"
+
   return (
-    <span className="Tooltip">
-      {props.children}
-      <span className="Tooltip__box">
-        <p className={`Tooltip__box--text ${props.className} `}>{props.tip}</p>
+    <span className={containerClass}>
+      {children}
+      <span className={boxClass}>
+        <p className={textClass}>{tip}</p>
         <svg
-          className="text-primary-800 h-1"
+          className={svgClass}
           x="0px"
           y="0px"
           viewBox="0 0 10 5"

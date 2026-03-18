@@ -12,7 +12,8 @@ const keyDownEvent = {
 }
 
 export async function selectOption(container: HTMLElement, optionText: string) {
-  fireEvent.keyDown(container, keyDownEvent)
+  const input = container.querySelector("input")
+  fireEvent.keyDown(input!, keyDownEvent)
   await findByText(container, optionText)
   fireEvent.click(getByText(container, optionText))
 }
@@ -38,10 +39,7 @@ describe(Select, () => {
       <Select options={options} onChange={mockChangeHandler} />,
     )
 
-    await selectOption(
-      container.querySelector(".Select") as HTMLDivElement,
-      "label2",
-    )
+    await selectOption(container, "label2")
 
     expect(mockChangeHandler).toHaveBeenCalledWith(
       { value: "value2", label: "label2" },
@@ -69,14 +67,8 @@ describe(Select, () => {
       <Select options={options} isMulti onChange={mockChangeHandler} />,
     )
 
-    await selectOption(
-      container.querySelector(".Select") as HTMLDivElement,
-      "label2",
-    )
-    await selectOption(
-      container.querySelector(".Select") as HTMLDivElement,
-      "label3",
-    )
+    await selectOption(container, "label2")
+    await selectOption(container, "label3")
 
     expect(mockChangeHandler).toHaveBeenCalledWith(
       [{ value: "value2", label: "label2" }],

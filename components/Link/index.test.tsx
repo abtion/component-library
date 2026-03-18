@@ -25,7 +25,7 @@ describe(Link, () => {
 
       const link = getByText(defaultProps.text as string)
 
-      expect(link).toHaveClass("Link--sm")
+      expect(link).toHaveClass("text-sm")
     })
   })
 
@@ -37,7 +37,7 @@ describe(Link, () => {
 
       const link = getByText(defaultProps.text as string)
 
-      expect(link).toHaveClass("Link--neutral-light")
+      expect(link).toHaveClass("text-neutral-400")
     })
   })
 
@@ -47,7 +47,7 @@ describe(Link, () => {
 
       const link = getByText(defaultProps.text as string)
 
-      expect(link).toHaveClass("Link--underline")
+      expect(link).toHaveClass("underline")
     })
   })
 })

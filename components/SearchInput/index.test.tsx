@@ -10,7 +10,7 @@ describe(SearchInput, () => {
       <SearchInput searchPhrase={mockFn} initialValue="" />,
     )
 
-    const input = container.querySelector(".SearchInput__input")
+    const input = container.querySelector("input")
     if (input)
       await act(async () => {
         await userEvent.type(input, "Search type phrase")
@@ -26,13 +26,13 @@ describe(SearchInput, () => {
       <SearchInput searchPhrase={mockFn} initialValue="" />,
     )
 
-    const input = container.querySelector(".SearchInput__input")
+    const input = container.querySelector("input")
     if (input)
       await act(async () => {
         await userEvent.type(input, "Search click phrase")
       })
 
-    const magnifier = container.querySelector(".SearchInput__magnifier")
+    const magnifier = container.querySelector("button[type='submit']")
     if (magnifier) await userEvent.click(magnifier)
 
     await waitFor(() => {

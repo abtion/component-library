@@ -1,7 +1,5 @@
 import React from "react"
-import classNames from "classnames"
-
-import "./index.scss"
+import { twMerge } from "tailwind-merge"
 
 export interface CardProps {
   icon: JSX.Element
@@ -20,21 +18,24 @@ export default function Card({
   learnMoreUrl,
   children,
 }: CardProps): JSX.Element {
-  const productCardClassName = classNames(
-    "ProductCard",
-    isDark && "ProductCard--dark",
+  const productCardClassName = twMerge(
+    "bg-light rounded-xl p-3",
+    isDark ? "bg-dark" : "",
   )
-  const titleClassName = classNames(
-    "ProductCard__title",
-    isDark && "ProductCard__title--dark",
+
+  const titleClassName = twMerge(
+    "mt-1 flex-none font-normal text-2xl",
+    isDark ? "text-light" : "",
   )
-  const descriptionClassName = classNames(
-    "ProductCard__description",
-    isDark && "ProductCard__description--dark",
+
+  const descriptionClassName = twMerge(
+    "pt-3 text-neutral-700",
+    isDark ? "text-primary-600" : "",
   )
-  const learnMoreClassName = classNames(
-    "ProductCard__learnMore",
-    isDark && "ProductCard__learnMore--dark",
+
+  const learnMoreClassName = twMerge(
+    "underline whitespace-nowrap font-medium text-neutral-700 hover:text-neutral-600",
+    isDark ? "text-primary-600 hover:text-primary-500" : "",
   )
 
   return (

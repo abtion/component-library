@@ -23,7 +23,7 @@ describe(ButtonClear, () => {
 
       const button = getByText(defaultProps.children as string)
 
-      expect(button.parentElement).toHaveClass("ButtonClear--md")
+      expect(button.parentElement).toHaveClass("px-5")
     })
   })
 
@@ -35,7 +35,7 @@ describe(ButtonClear, () => {
 
       const button = getByText(defaultProps.children as string)
 
-      expect(button.parentElement).toHaveClass("ButtonClear--primary")
+      expect(button.parentElement).toHaveClass("text-primary-500")
     })
   })
 
