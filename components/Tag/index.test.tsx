@@ -26,8 +26,6 @@ describe(Tag, () => {
 
       const element = getByRole("button")
 
-      expect(element).toHaveClass("Tag__close")
-
       expect(closeHandler).not.toHaveBeenCalled()
 
       await userEvent.click(element)

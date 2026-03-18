@@ -67,7 +67,7 @@ describe(Dropdown, () => {
 
     await act(async () => await userEvent.click(dropdown))
     await waitFor(() => {
-      const otherElement = container.querySelector(".Dropdown__active")
+      const otherElement = container.querySelector(".bg-light")
       expect(otherElement).toContainHTML(active.text)
     })
   })

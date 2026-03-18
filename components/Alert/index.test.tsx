@@ -25,7 +25,7 @@ describe(Alert, () => {
 
       const element = getByText(defaultProps.children as string)
 
-      expect(element).toHaveClass("Alert--primary")
+      expect(element).toHaveClass("text-primary-800")
     })
   })
 
@@ -37,8 +37,6 @@ describe(Alert, () => {
       )
 
       const element = getByRole("button")
-
-      expect(element).toHaveClass("Alert__close")
 
       expect(closeHandler).not.toHaveBeenCalled()
 

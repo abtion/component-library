@@ -23,7 +23,7 @@ describe(Input, () => {
 
       const input = getByPlaceholderText(defaultProps.placeholder as string)
 
-      expect(input).toHaveClass("Input--md")
+      expect(input).toHaveClass("px-5")
     })
   })
 
@@ -35,7 +35,7 @@ describe(Input, () => {
 
       const input = getByPlaceholderText(defaultProps.placeholder as string)
 
-      expect(input).toHaveClass("Input--default")
+      expect(input).toHaveClass("border-neutral-300")
     })
   })
 })

@@ -9,14 +9,6 @@ const defaultProps = {
 }
 
 describe(AlertIcon, () => {
-  it("displays an svg icon component with a predefined class", () => {
-    const { container } = render(<AlertIcon {...defaultProps} />)
-
-    const element = container.querySelector("svg")
-
-    expect(element).toHaveClass("AlertIcon")
-  })
-
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { container } = render(
@@ -25,7 +17,7 @@ describe(AlertIcon, () => {
 
       const element = container.querySelector("svg")
 
-      expect(element).toHaveClass("AlertIcon--primary")
+      expect(element).toHaveClass("text-primary-400")
     })
   })
 })

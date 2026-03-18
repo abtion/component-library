@@ -23,7 +23,7 @@ describe(Button, () => {
 
       const button = getByText(defaultProps.children as string)
 
-      expect(button.parentElement).toHaveClass("Button--md")
+      expect(button.parentElement).toHaveClass("px-5")
     })
   })
 
@@ -35,7 +35,7 @@ describe(Button, () => {
 
       const button = getByText(defaultProps.children as string)
 
-      expect(button.parentElement).toHaveClass("Button--primary")
+      expect(button.parentElement).toHaveClass("bg-primary-500")
     })
   })
 

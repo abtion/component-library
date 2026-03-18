@@ -25,7 +25,7 @@ describe(ButtonOutline, () => {
 
       const button = getByText(defaultProps.children as string)
 
-      expect(button.parentElement).toHaveClass("ButtonOutline--md")
+      expect(button.parentElement).toHaveClass("px-5")
     })
   })
 
@@ -37,7 +37,7 @@ describe(ButtonOutline, () => {
 
       const button = getByText(defaultProps.children as string)
 
-      expect(button.parentElement).toHaveClass("ButtonOutline--primary")
+      expect(button.parentElement).toHaveClass("text-primary-500")
     })
   })
 
