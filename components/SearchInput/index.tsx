@@ -27,7 +27,7 @@ export default function SearchInput({
 
   const { className, ...inputProps } = restInputProps as {
     className?: string
-    [key: string]: any
+    [key: string]: unknown
   }
 
   const formBase =
