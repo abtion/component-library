@@ -7,7 +7,7 @@
     "@heroicons/react": "^2.2.0",
     "@swc/jest": "^0.2.38",
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/postcss": "^4.1.11",
+    "@tailwindcss/postcss": "^4.2.2",
     "@uidotdev/usehooks": "^2.4.1",
     "ag-grid-react": "^33.3.1",
     "autoprefixer": "^10.4.21",
